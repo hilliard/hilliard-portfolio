@@ -6,20 +6,20 @@ import { certifications, certificationCategories } from '../../data/certificatio
 ---
 
 <BaseLayout
-  title="49+ Professional Certifications | Hilliard M. Scott"
-  description="Explore all 49+ professional software engineering, AI, frontend, backend, and fullstack certifications achieved by Hilliard M. Scott."
+  title="49+ Recent Professional Certifications (Last 2 Years) | Hilliard M. Scott"
+  description="Explore all 49+ recent professional software engineering, AI, frontend, backend, and fullstack certifications achieved by Hilliard M. Scott in the last 2 years."
 >
   <div class="space-y-12" data-controller="filter">
     <!-- Header -->
     <div class="space-y-4 max-w-3xl">
       <div class="inline-flex items-center gap-2 text-xs font-mono text-accent uppercase tracking-widest font-bold">
-        <span>●</span> CONTINUOUS TECHNICAL MASTERY
+        <span>●</span> CONTINUOUS TECHNICAL MASTERY (LAST 2 YEARS)
       </div>
       <h1 class="text-3xl sm:text-5xl font-black font-mono text-mono-50 tracking-tight">
-        49+ Professional Certifications
+        49+ Recent Professional Certifications
       </h1>
       <p class="text-sm sm:text-base text-mono-300 leading-relaxed font-sans">
-        A relentless commitment to mastering modern engineering paradigms — from edge-rendered Astro frameworks and TypeScript to deep neural networks, Model Context Protocol (MCP), and autonomous AI agent architectures.
+        A relentless commitment to mastering modern engineering paradigms — all 49+ credentials acquired in the last 2 years, spanning edge-rendered Astro frameworks and TypeScript to deep neural networks, Model Context Protocol (MCP), and autonomous AI agent architectures.
       </p>
     </div>
 
@@ -35,14 +35,14 @@ import { certifications, certificationCategories } from '../../data/certificatio
             type="text"
             data-filter-target="input"
             data-action="input->filter#search"
-            placeholder="Search 49+ certs (e.g. MCP, AI, TypeScript, Astro, React)..."
+            placeholder="Search 49+ recent certs (e.g. MCP, AI, TypeScript, Astro, React)..."
             class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-mono-900 border border-mono-800 text-mono-50 placeholder-mono-400 focus:outline-none focus:border-accent font-mono text-xs sm:text-sm transition-colors"
           />
         </div>
 
         <div class="flex items-center justify-between w-full sm:w-auto gap-4 font-mono text-xs">
           <span data-filter-target="counter" class="text-mono-300 font-semibold px-3 py-1 rounded bg-mono-900 border border-mono-800">
-            {certifications.length} certificates
+            {certifications.length} recent certificates
           </span>
           <button
             type="button"

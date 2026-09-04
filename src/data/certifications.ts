@@ -1627,7 +1627,7 @@ export const certifications: Certification[] = [
 ];
 
 export const certificationCategories = [
-  { id: 'all', label: 'All Certifications' },
+  { id: 'all', label: 'All Recent Certifications' },
   { id: 'ai-ml', label: 'AI & Machine Learning' },
   { id: 'fullstack', label: 'Fullstack & Frameworks' },
   { id: 'frontend', label: 'Frontend & UI' },

@@ -5,7 +5,7 @@ import { careerItems } from '../data/career';
 
 const quickLinks = [
   { title: 'Home', category: 'Navigation', url: '/', keywords: 'home start top landing' },
-  { title: 'All Certifications (49+)', category: 'Navigation', url: '/certifications', keywords: 'certificates degrees scrimba uccs ai react typescript' },
+  { title: 'Recent Certifications (49+)', category: 'Navigation', url: '/certifications', keywords: 'recent certificates degrees scrimba uccs ai react typescript' },
   { title: 'Career & Work Experience (19+)', category: 'Navigation', url: '/work', keywords: 'portfolio work history experience storagetek datasonix sketchup' },
   { title: 'Engineering & STOPPER Philosophy', category: 'Navigation', url: '/philosophy', keywords: 'hardware software bridge goalie hockey music stopper' },
   { title: 'Resume Replacement', category: 'Navigation', url: '/resume', keywords: 'cv resume print pdf export qualifications' },
@@ -76,7 +76,7 @@ const quickLinks = [
 
       <!-- Certifications Index -->
       <div class="px-3 py-1.5 text-xs font-mono font-semibold text-accent tracking-wider uppercase mt-2">
-        Certifications ({certifications.length})
+        Recent Certifications ({certifications.length})
       </div>
       {certifications.map((cert) => (
         <a

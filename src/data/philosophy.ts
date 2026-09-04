@@ -69,7 +69,7 @@ export const engineeringPrinciples: PhilosophyPrinciple[] = [
 
 export const bioStats = {
   yearsExperience: "30+",
-  certificationsCount: "49+",
+  certificationsCount: "49+ Recent",
   patentsAwarded: "1 US Patent",
   startupsFounded: "3 Co-Founded",
   championships: "Silver Stick & State Title",
