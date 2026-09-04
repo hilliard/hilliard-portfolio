@@ -92,7 +92,7 @@ export const certifications: Certification[] = [
       "AI Agents"
     ],
     "image": "/img/Certificates/images/The-AI-Engineering-Path-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/The-AI-Engineering-Path-certificate.jpg",
+    "secondaryImage": "/img/reflections/ai_engineering_path_ref.jpg",
     "pdf": "/img/Certificates/pdfs/The-AI-Engineering-Path-certificate.pdf",
     "summary": "Complete learning path for AI engineering from fundamentals to advanced applications. This comprehensive course covers machine learning, deep learning, neural networks, and practical AI engineering skills. Learn to build, train, and deploy AI models for real-world problems.",
     "descriptions": [
@@ -125,7 +125,7 @@ export const certifications: Certification[] = [
       "Astro"
     ],
     "image": "/img/Certificates/images/Intro-to-Astro-certificate.jpg",
-    "secondaryImage": "/img/javascript-1-3096.jpg",
+    "secondaryImage": "/img/Outer-Space-3096.jpg",
     "pdf": "/img/Certificates/pdfs/Intro-to-Astro-certificate.pdf",
     "summary": "Learn Astro, a modern web framework for building faster, content-focused websites. This course teaches you how to build serverless websites with Astro's innovative approach to web development. You'll learn how to create performant, scalable web applications using Astro's unique architecture and tools.",
     "descriptions": [
@@ -254,7 +254,7 @@ export const certifications: Certification[] = [
       "Fullstack"
     ],
     "image": "/img/Certificates/images/Build-Multipage-Web-App-certificate.jpg",
-    "secondaryImage": "/img/3D-Architect-480.jpg",
+    "secondaryImage": "/img/3D-Architect-draw-480.jpg",
     "pdf": "/img/Certificates/pdfs/Build-Multipage-Web-App-certificate.pdf",
     "summary": "Build a Multi-Page Website with HTML and CSS is the perfect course for frontend developers  who   want to practice bringing high-quality Figma designs to life in the browser.\r\n\r\n                    It’s the ultimate collab: Frontend Mentor on design, Scrimba on toolkit, Kevin Powell as a guide and you as developer.\r\n\r\n                    During the course, you’ll test your HTML, CSS and JavaScript skills by building out a responsive, multi-page site featuring a homepage, buttons, a navigation bar, tabs, keyboard navigation and underline, dot and number indicators.\r\n\r\n                    You’ll also learn how to create an effective design system to ensure that your site is sharp and professional, and your coding is as efficient as possible.\r\n\r\n                    You’ll get as much independent practice as possible in this course, using detailed designs in Figma to craft a site which looks amazing on a variety of screen sizes and browsers.\r\n\r\n                    Thanks to Scrimba interactive technology, you’ll build the muscle memory you need to become a truly efficient developer.\r\n\r\n                    After completing this course, you’ll have a deep understanding of CSS and responsive design and the knowledge to build an interactive site which users will adore.\r\n\r\n                    Support during the course: While we can't offer one-to-one support (yet!), our friendly Discord community is waiting to welcome your questions, share ideas with you, or just chat on a coffee break.",
     "descriptions": [
@@ -460,7 +460,7 @@ export const certifications: Certification[] = [
       "Tools & Langs"
     ],
     "image": "/img/Certificates/images/Front-End-Developer-Interview-Tips.jpg",
-    "secondaryImage": "/img/UCCS-classroom-3096.jpg",
+    "secondaryImage": "/img/Technical-Advising-3096.jpg",
     "pdf": "/img/Certificates/pdfs/Front-End-Developer-Interview-Tips.pdf",
     "summary": "Ace your front-end developer interviews with practical tips and strategies. This course prepares you for technical interviews by covering common question types, coding challenges, and behavioral interview techniques. Learn how to communicate your skills effectively and demonstrate your expertise to potential employers.",
     "descriptions": [
@@ -818,7 +818,7 @@ export const certifications: Certification[] = [
       "Tools & Langs"
     ],
     "image": "/img/Certificates/images/Learn-Basic-JavaScript-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-Basic-JavaScript-certificate.jpg",
+    "secondaryImage": "/img/javascript-1-3096.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-Basic-JavaScript-certificate.pdf",
     "summary": "Start your JavaScript journey with this comprehensive basics course. Learn variables, data types, operators, control flow, functions, and DOM manipulation. This course provides a solid foundation for web development and prepares you for more advanced JavaScript concepts.",
     "descriptions": [
@@ -850,7 +850,7 @@ export const certifications: Certification[] = [
       "AI / ML"
     ],
     "image": "/img/Certificates/images/Learn-Context-Engineering-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-Context-Engineering-certificate.jpg",
+    "secondaryImage": "/img/reflections/context_engineering_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-Context-Engineering-certificate.pdf",
     "summary": "Master the art of context engineering for AI models. Learn how to structure prompts effectively, manage token usage, and provide the right context for optimal AI responses. This course teaches advanced techniques for working with language models and getting the best results from AI systems.",
     "descriptions": [
@@ -949,7 +949,7 @@ export const certifications: Certification[] = [
       "Firebase"
     ],
     "image": "/img/Certificates/images/Learn-Firebase-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-Firebase-certificate.jpg",
+    "secondaryImage": "/img/reflections/firebase_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-Firebase-certificate.pdf",
     "summary": "Learn Firebase and build real-time applications with Google's cloud platform. This course covers Realtime Database, Firestore, Authentication, Hosting, and Cloud Functions. Build complete applications with Firebase's comprehensive suite of backend services.",
     "descriptions": [
@@ -982,7 +982,7 @@ export const certifications: Certification[] = [
       "React"
     ],
     "image": "/img/Certificates/images/Learn-Interactive-React-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-Interactive-React-certificate.jpg",
+    "secondaryImage": "/img/javascript-1-3096.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-Interactive-React-certificate.pdf",
     "summary": "Build interactive and dynamic React applications that engage users. This course teaches techniques for handling user interactions, managing state effectively, and creating responsive interfaces. Learn how to create compelling user experiences with React.",
     "descriptions": [
@@ -1014,7 +1014,7 @@ export const certifications: Certification[] = [
       "Tools & Langs"
     ],
     "image": "/img/Certificates/images/Learn-JavaScript-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-JavaScript-certificate.jpg",
+    "secondaryImage": "/img/javascript-2-3096.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-JavaScript-certificate.pdf",
     "summary": "Deepen your JavaScript knowledge with intermediate and advanced concepts. This course builds on basics to cover closures, asynchronous programming, event loop, and design patterns. Become a proficient JavaScript developer capable of writing complex applications.",
     "descriptions": [
@@ -1046,7 +1046,7 @@ export const certifications: Certification[] = [
       "Tools & Langs"
     ],
     "image": "/img/Certificates/images/Learn-Markdown-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-Markdown-certificate.jpg",
+    "secondaryImage": "/img/reflections/markdown_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-Markdown-certificate.pdf",
     "summary": "Master Markdown, the lightweight markup language used across the web. This course covers syntax, formatting, extensions, and practical applications. Learn to write clean, readable documentation and content with Markdown.",
     "descriptions": [
@@ -1078,7 +1078,7 @@ export const certifications: Certification[] = [
       "Tools & Langs"
     ],
     "image": "/img/Certificates/images/Learn-Modern-JavaScript-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-Modern-JavaScript-certificate.jpg",
+    "secondaryImage": "/img/javascript-1-3096.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-Modern-JavaScript-certificate.pdf",
     "summary": "Learn contemporary JavaScript development practices and tools. This course covers modern tooling, build processes, module systems, and latest language features. Stay current with JavaScript best practices used in professional development.",
     "descriptions": [
@@ -1111,7 +1111,7 @@ export const certifications: Certification[] = [
       "Next.js"
     ],
     "image": "/img/Certificates/images/Learn-Next.js-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-Next.js-certificate.jpg",
+    "secondaryImage": "/img/reflections/nextjs_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-Next.js-certificate.pdf",
     "summary": "Build production-ready React applications with Next.js. This course covers server-side rendering, static generation, API routes, and deployment. Learn how to create fast, SEO-friendly applications with Next.js.",
     "descriptions": [
@@ -1144,7 +1144,7 @@ export const certifications: Certification[] = [
       "Node.js"
     ],
     "image": "/img/Certificates/images/Learn-Node.js-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-Node.js-certificate.jpg",
+    "secondaryImage": "/img/express-js-1-3096.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-Node.js-certificate.pdf",
     "summary": "Build server-side applications with Node.js. This course covers core modules, file operations, streams, event emitters, and async patterns. Learn how to create scalable backend applications with JavaScript.",
     "descriptions": [
@@ -1176,7 +1176,7 @@ export const certifications: Certification[] = [
       "AI / ML"
     ],
     "image": "/img/Certificates/images/Learn-RAG-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-RAG-certificate.jpg",
+    "secondaryImage": "/img/reflections/rag_system_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-RAG-certificate.pdf",
     "summary": "Master Retrieval-Augmented Generation RAG systems for building knowledge-aware AI applications. This course covers vector databases, semantic search, information retrieval, and prompt engineering for RAG. Learn how to ground AI models with external knowledge.",
     "descriptions": [
@@ -1209,7 +1209,7 @@ export const certifications: Certification[] = [
       "React"
     ],
     "image": "/img/Certificates/images/Learn-React-Hooks-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-React-Hooks-certificate.jpg",
+    "secondaryImage": "/img/reflections/react_hooks_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-React-Hooks-certificate.pdf",
     "summary": "Learn React Hooks by building a practical project – Tic Tac Toe game. This hands-on course covers useState, useEffect, useContext, and custom hooks through implementing a classic game. Perfect for mastering hooks through practical application.",
     "descriptions": [
@@ -1242,7 +1242,7 @@ export const certifications: Certification[] = [
       "React"
     ],
     "image": "/img/Certificates/images/Learn-React-Styled-Components-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-React-Styled-Components-certificate.jpg",
+    "secondaryImage": "/img/reflections/ui_design_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-React-Styled-Components-certificate.pdf",
     "summary": "Master styled-components for styling React applications with CSS-in-JS. This course covers component-scoped styling, global styles, theming, and advanced styling patterns. Learn how styled-components simplifies styling and improves component reusability.",
     "descriptions": [
@@ -1275,7 +1275,7 @@ export const certifications: Certification[] = [
       "Svelte"
     ],
     "image": "/img/Certificates/images/Learn-Svelte-JS-certificate-.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-Svelte-JS-certificate-.jpg",
+    "secondaryImage": "/img/reflections/svelte_js_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-Svelte-JS-certificate-.pdf",
     "summary": "Learn Svelte, the modern JavaScript framework that compiles to vanilla JavaScript with exceptional performance. This course covers reactive variables, component state, event handlers, and building interactive applications with minimal boilerplate.",
     "descriptions": [
@@ -1309,7 +1309,7 @@ export const certifications: Certification[] = [
       "Tailwind CSS"
     ],
     "image": "/img/Certificates/images/Learn-Tailwind-CSS-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-Tailwind-CSS-certificate.jpg",
+    "secondaryImage": "/img/reflections/tailwind_css_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-Tailwind-CSS-certificate.pdf",
     "summary": "Master Tailwind CSS, a utility-first CSS framework for rapid UI development. This course covers utility classes, responsive design, customization, and building modern interfaces with Tailwind's powerful styling system.",
     "descriptions": [
@@ -1342,7 +1342,7 @@ export const certifications: Certification[] = [
       "Firebase"
     ],
     "image": "/img/Certificates/images/Learn-To-Build-A-Mobile-App-with-Firebase-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-To-Build-A-Mobile-App-with-Firebase-certificate.jpg",
+    "secondaryImage": "/img/reflections/firebase_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-To-Build-A-Mobile-App-with-Firebase-certificate.pdf",
     "summary": "Build mobile applications using Firebase as your backend. This course covers Firebase authentication, cloud firestore, real-time databases, cloud storage, and deployment. Learn to create scalable mobile apps with minimal backend infrastructure.",
     "descriptions": [
@@ -1375,7 +1375,7 @@ export const certifications: Certification[] = [
       "AI Agents"
     ],
     "image": "/img/Certificates/images/Learn-to-Code-with-AI-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-to-Code-with-AI-certificate.jpg",
+    "secondaryImage": "/img/ai-agent-1-3096.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-to-Code-with-AI-certificate.pdf",
     "summary": "Learn coding fundamentals using AI assistance tools and resources. This course teaches how to leverage AI tools like ChatGPT and other AI assistants to accelerate learning, solve problems, and enhance productivity in your development workflow.",
     "descriptions": [
@@ -1408,7 +1408,7 @@ export const certifications: Certification[] = [
       "TypeScript"
     ],
     "image": "/img/Certificates/images/Learn-TypeScript-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-TypeScript-certificate.jpg",
+    "secondaryImage": "/img/typescript-1-3096.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-TypeScript-certificate.pdf",
     "summary": "Master TypeScript, a typed superset of JavaScript that adds static typing and enhanced tooling. This course covers type annotations, interfaces, generics, and best practices for building scalable, maintainable applications with TypeScript.",
     "descriptions": [
@@ -1440,7 +1440,7 @@ export const certifications: Certification[] = [
       "Frontend"
     ],
     "image": "/img/Certificates/images/Learn-UI-Design-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-UI-Design-certificate.jpg",
+    "secondaryImage": "/img/reflections/ui_design_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-UI-Design-certificate.pdf",
     "summary": "Learn the principles and practices of User Interface Design. This course covers design fundamentals, color theory, typography, layout systems, and creating intuitive interfaces that users love. Develop visual design skills using industry-standard tools.",
     "descriptions": [
@@ -1473,7 +1473,7 @@ export const certifications: Certification[] = [
       "Unit Testing"
     ],
     "image": "/img/Certificates/images/Learn-Unit-Testing-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-Unit-Testing-certificate.jpg",
+    "secondaryImage": "/img/reflections/unit_testing_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-Unit-Testing-certificate.pdf",
     "summary": "Master unit testing practices and frameworks for writing reliable, maintainable code. This course covers test-driven development, testing frameworks, mocking, and best practices for ensuring code quality and preventing regressions.",
     "descriptions": [
@@ -1506,7 +1506,7 @@ export const certifications: Certification[] = [
       "Vue"
     ],
     "image": "/img/Certificates/images/Learn-Vue-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-Vue-certificate.jpg",
+    "secondaryImage": "/img/reflections/vue_js_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-Vue-certificate.pdf",
     "summary": "Learn Vue.js, a progressive JavaScript framework for building user interfaces. This course covers Vue fundamentals, reactive data binding, components, state management, and routing. Build interactive web applications with Vue's intuitive API.",
     "descriptions": [
@@ -1538,7 +1538,7 @@ export const certifications: Certification[] = [
       "Tools & Langs"
     ],
     "image": "/img/Certificates/images/Learn-Markdown-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Learn-Markdown-certificate.jpg",
+    "secondaryImage": "/img/reflections/markdown_ref.jpg",
     "pdf": "/img/Certificates/pdfs/Learn-Markdown-certificate.pdf",
     "summary": "Master Markdown syntax and become proficient at writing documentation and content. This course covers all Markdown formatting, from basic text styling to complex tables and code blocks. Learn how Markdown is used across GitHub, blogs, and technical writing.",
     "descriptions": [
@@ -1571,7 +1571,7 @@ export const certifications: Certification[] = [
       "AI Agents"
     ],
     "image": "/img/Certificates/images/Free-OpenAI's-Assistants-API-certificate.jpg",
-    "secondaryImage": "/img/SketchUp-extensibility-3096.jpg",
+    "secondaryImage": "/img/ai-1-3096.jpg",
     "pdf": "/img/Certificates/pdfs/Free-OpenAI's-Assistants-API-certificate.pdf",
     "summary": "Learn to build intelligent applications using OpenAI's Assistants API. This course teaches you how to create AI-powered assistants that can handle conversations, retrieve information, and perform actions. You'll understand how to integrate the Assistants API into your applications to provide powerful AI capabilities.",
     "descriptions": [
@@ -1603,7 +1603,7 @@ export const certifications: Certification[] = [
       "AI / ML"
     ],
     "image": "/img/Certificates/images/Prompt-Engineering-For-Web-Developers-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/Prompt-Engineering-For-Web-Developers-certificate.jpg",
+    "secondaryImage": "/img/claude-ai-1-3096.jpg",
     "pdf": "/img/Certificates/pdfs/Prompt-Engineering-For-Web-Developers-certificate.pdf",
     "summary": "Learn prompt engineering specifically tailored for web developers. This course teaches how to effectively communicate with AI tools, generate code, debug issues, and accelerate development. Master the art of asking AI the right questions to get better results.",
     "descriptions": [
