@@ -18,6 +18,202 @@ export interface Certification {
 export const certifications: Certification[] = [
   {
     "id": "01",
+    "slug": "the-fullstack-developer-path",
+    "title": "The Fullstack Developer Path",
+    "provider": "Scrimba",
+    "category": "fullstack",
+    "categoryLabel": "Fullstack & Frameworks",
+    "tags": [
+      "Fullstack"
+    ],
+    "image": "/img/Certificates/images/The-Fullstack-Developer-Path-certificate.jpg",
+    "secondaryImage": "/img/fullstack-1-3096.jpg",
+    "pdf": "/img/Certificates/pdfs/The-Fullstack-Developer-Path-certificate.pdf",
+    "summary": "Complete path to becoming a fullstack developer. This comprehensive program covers both front-end and back-end technologies, databases, deployment, and building complete web applications. Learn to create end-to-end solutions for modern web applications.",
+    "descriptions": [
+      "Complete path to becoming a fullstack developer. This comprehensive program covers both front-end and back-end technologies, databases, deployment, and building complete web applications. Learn to create end-to-end solutions for modern web applications.",
+      "Master fullstack development and build complete, production-ready web applications from scratch."
+    ],
+    "skills": [
+      "Front-end fundamentals",
+      "HTML, CSS, JavaScript",
+      "Modern frameworks",
+      "Back-end development",
+      "Server-side languages",
+      "Database design and management",
+      "API development",
+      "Authentication and security",
+      "Deployment and scaling",
+      "Full application architecture"
+    ],
+    "featured": true
+  },
+  {
+    "id": "02",
+    "slug": "the-front-end-developer-career-path",
+    "title": "The Front-End Developer Career Path",
+    "provider": "Scrimba",
+    "category": "fullstack",
+    "categoryLabel": "Fullstack & Frameworks",
+    "tags": [
+      "Fullstack"
+    ],
+    "image": "/img/Certificates/images/The-Front-End-Developer-Career-Path-certificate.jpg",
+    "secondaryImage": "/img/front-end-1-3096.jpg",
+    "pdf": "/img/Certificates/pdfs/The-Front-End-Developer-Career-Path-certificate.pdf",
+    "summary": "Complete career path for aspiring front-end developers. This comprehensive program covers HTML, CSS, JavaScript, modern frameworks, and professional development practices. Learn everything you need to launch a successful front-end development career.",
+    "descriptions": [
+      "Complete career path for aspiring front-end developers. This comprehensive program covers HTML, CSS, JavaScript, modern frameworks, and professional development practices. Learn everything you need to launch a successful front-end development career.",
+      "Master front-end development from basics to advanced techniques and prepare for a rewarding career."
+    ],
+    "skills": [
+      "HTML fundamentals",
+      "CSS and responsive design",
+      "JavaScript mastery",
+      "React and components",
+      "State management",
+      "API integration",
+      "Testing and debugging",
+      "Performance optimization",
+      "Career development",
+      "Building professional portfolio"
+    ],
+    "featured": true
+  },
+  {
+    "id": "03",
+    "slug": "the-ai-engineering-path",
+    "title": "The AI Engineering Path",
+    "provider": "Scrimba",
+    "category": "ai-ml",
+    "categoryLabel": "AI & Machine Learning",
+    "tags": [
+      "AI / ML",
+      "AI Agents"
+    ],
+    "image": "/img/Certificates/images/The-AI-Engineering-Path-certificate.jpg",
+    "secondaryImage": "/img/Certificates/images/The-AI-Engineering-Path-certificate.jpg",
+    "pdf": "/img/Certificates/pdfs/The-AI-Engineering-Path-certificate.pdf",
+    "summary": "Complete learning path for AI engineering from fundamentals to advanced applications. This comprehensive course covers machine learning, deep learning, neural networks, and practical AI engineering skills. Learn to build, train, and deploy AI models for real-world problems.",
+    "descriptions": [
+      "Complete learning path for AI engineering from fundamentals to advanced applications. This comprehensive course covers machine learning, deep learning, neural networks, and practical AI engineering skills. Learn to build, train, and deploy AI models for real-world problems.",
+      "Master the complete AI engineering path and become proficient in modern AI and machine learning technologies."
+    ],
+    "skills": [
+      "Machine learning fundamentals",
+      "Supervised learning algorithms",
+      "Unsupervised learning",
+      "Deep learning basics",
+      "Neural networks",
+      "Computer vision",
+      "Natural language processing",
+      "Model evaluation and optimization",
+      "Deployment and production",
+      "Building AI applications"
+    ],
+    "featured": true
+  },
+  {
+    "id": "04",
+    "slug": "intro-to-astro",
+    "title": "Intro to Astro",
+    "provider": "Scrimba",
+    "category": "fullstack",
+    "categoryLabel": "Fullstack & Frameworks",
+    "tags": [
+      "Fullstack",
+      "Astro"
+    ],
+    "image": "/img/Certificates/images/Intro-to-Astro-certificate.jpg",
+    "secondaryImage": "/img/javascript-1-3096.jpg",
+    "pdf": "/img/Certificates/pdfs/Intro-to-Astro-certificate.pdf",
+    "summary": "Learn Astro, a modern web framework for building faster, content-focused websites. This course teaches you how to build serverless websites with Astro's innovative approach to web development. You'll learn how to create performant, scalable web applications using Astro's unique architecture and tools.",
+    "descriptions": [
+      "Learn Astro, a modern web framework for building faster, content-focused websites. This course teaches you how to build serverless websites with Astro's innovative approach to web development. You'll learn how to create performant, scalable web applications using Astro's unique architecture and tools.",
+      "Discover how Astro enables you to build web applications at scale with a focus on performance, developer experience, and content delivery."
+    ],
+    "skills": [
+      "Astro fundamentals",
+      "Component patterns",
+      "Static site generation",
+      "Dynamic routing",
+      "Data fetching and APIs",
+      "Markdown integration",
+      "CSS and styling",
+      "Deployment strategies",
+      "Performance optimization",
+      "Island architecture"
+    ],
+    "featured": true
+  },
+  {
+    "id": "05",
+    "slug": "intro-to-model-context-protocol-mcp",
+    "title": "Intro to Model Context Protocol MCP",
+    "provider": "Scrimba",
+    "category": "ai-ml",
+    "categoryLabel": "AI & Machine Learning",
+    "tags": [
+      "AI / ML",
+      "MCP"
+    ],
+    "image": "/img/Certificates/images/Intro-To-Model-Context-Protocol-(MCP)-certificate.jpg",
+    "secondaryImage": "/img/mcp-1-3096.jpg",
+    "pdf": "/img/Certificates/pdfs/Intro-To-Model-Context-Protocol (MCP)-certificate.pdf",
+    "summary": "Learn the Model Context Protocol, a standardized way for AI models to interact with external tools and data sources. This course introduces you to MCP architecture, how to build MCP servers and clients, and how to integrate them with your AI applications for enhanced functionality.",
+    "descriptions": [
+      "Learn the Model Context Protocol, a standardized way for AI models to interact with external tools and data sources. This course introduces you to MCP architecture, how to build MCP servers and clients, and how to integrate them with your AI applications for enhanced functionality.",
+      "Master the fundamentals of MCP and learn how to extend AI models with access to custom tools and data sources for more powerful intelligent applications."
+    ],
+    "skills": [
+      "MCP architecture and concepts",
+      "Protocol specification",
+      "Building MCP servers",
+      "Building MCP clients",
+      "Tool definition and exposure",
+      "Resource management",
+      "Error handling",
+      "Integration with AI models",
+      "Security considerations",
+      "Real-world MCP applications"
+    ],
+    "featured": true
+  },
+  {
+    "id": "06",
+    "slug": "learn-ai-agents",
+    "title": "LearnAI Agents",
+    "provider": "Scrimba",
+    "category": "ai-ml",
+    "categoryLabel": "AI & Machine Learning",
+    "tags": [
+      "AI / ML",
+      "AI Agents"
+    ],
+    "image": "/img/Certificates/images/Learn-AI-Agents-certificate.jpg",
+    "secondaryImage": "/img/ai-agent-1-3096.jpg",
+    "pdf": "/img/Certificates/pdfs/Learn-AI-Agents-certificate.pdf",
+    "summary": "Master AI agents and autonomous systems. This course explores how to build intelligent agents that can reason, plan, and take actions. Learn about agent architectures, decision-making systems, and practical applications of AI agents in real-world scenarios.",
+    "descriptions": [
+      "Master AI agents and autonomous systems. This course explores how to build intelligent agents that can reason, plan, and take actions. Learn about agent architectures, decision-making systems, and practical applications of AI agents in real-world scenarios.",
+      "Discover the power of AI agents and learn to build autonomous systems that can solve complex problems."
+    ],
+    "skills": [
+      "Agent fundamentals",
+      "Agent architectures",
+      "Decision-making systems",
+      "Reinforcement learning",
+      "Planning algorithms",
+      "Knowledge representation",
+      "Multi-agent systems",
+      "Agent communication",
+      "Real-world applications",
+      "Building autonomous systems"
+    ],
+    "featured": true
+  },
+  {
+    "id": "07",
     "slug": "build-dev-portfolio",
     "title": "Build And Deploy Your Portfolio",
     "provider": "Scrimba",
@@ -48,7 +244,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "02",
+    "id": "08",
     "slug": "build-multipage-website",
     "title": "Build Multipage Website",
     "provider": "Scrimba",
@@ -91,7 +287,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "03",
+    "id": "09",
     "slug": "build-react-project-build-a-movie-search-project",
     "title": "build-react-project-build-a-movie-search-project-desc.html",
     "provider": "Scrimba",
@@ -124,7 +320,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "04",
+    "id": "10",
     "slug": "build-reusable-react-components",
     "title": "build-reusable-react-components-desc.html",
     "provider": "Scrimba",
@@ -157,7 +353,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "05",
+    "id": "11",
     "slug": "build-websites-with-figma-html-css-and-javascript",
     "title": "build-websites-with-figma-html-css-and-javascript-desc.html",
     "provider": "Scrimba",
@@ -189,7 +385,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "06",
+    "id": "12",
     "slug": "deploy-ai-apps-with-cloudflare",
     "title": "Deploy AI apps with Cloudflare",
     "provider": "Scrimba",
@@ -222,7 +418,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "07",
+    "id": "13",
     "slug": "flexbox-learn-css-flexbox",
     "title": "Flexbox Learn CSS Flexbox",
     "provider": "Scrimba",
@@ -254,7 +450,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "08",
+    "id": "14",
     "slug": "front-end-developer-interview-tips",
     "title": "Front-End Developer Interview Tips",
     "provider": "Scrimba",
@@ -286,7 +482,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "09",
+    "id": "15",
     "slug": "intro-mistral-ai",
     "title": "Intrto Mistral AI and Scrimba",
     "provider": "Scrimba",
@@ -319,7 +515,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "10",
+    "id": "16",
     "slug": "intro-to-ai-engineering",
     "title": "Intro to AI Engineering",
     "provider": "Scrimba",
@@ -352,40 +548,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "11",
-    "slug": "intro-to-astro",
-    "title": "Intro to Astro",
-    "provider": "Scrimba",
-    "category": "fullstack",
-    "categoryLabel": "Fullstack & Frameworks",
-    "tags": [
-      "Fullstack",
-      "Astro"
-    ],
-    "image": "/img/Certificates/images/Intro-to-Astro-certificate.jpg",
-    "secondaryImage": "/img/javascript-1-3096.jpg",
-    "pdf": "/img/Certificates/pdfs/Intro-to-Astro-certificate.pdf",
-    "summary": "Learn Astro, a modern web framework for building faster, content-focused websites. This course teaches you how to build serverless websites with Astro's innovative approach to web development. You'll learn how to create performant, scalable web applications using Astro's unique architecture and tools.",
-    "descriptions": [
-      "Learn Astro, a modern web framework for building faster, content-focused websites. This course teaches you how to build serverless websites with Astro's innovative approach to web development. You'll learn how to create performant, scalable web applications using Astro's unique architecture and tools.",
-      "Discover how Astro enables you to build web applications at scale with a focus on performance, developer experience, and content delivery."
-    ],
-    "skills": [
-      "Astro fundamentals",
-      "Component patterns",
-      "Static site generation",
-      "Dynamic routing",
-      "Data fetching and APIs",
-      "Markdown integration",
-      "CSS and styling",
-      "Deployment strategies",
-      "Performance optimization",
-      "Island architecture"
-    ],
-    "featured": true
-  },
-  {
-    "id": "12",
+    "id": "17",
     "slug": "intro-to-claude-ai",
     "title": "Intro to Claude AI",
     "provider": "Scrimba",
@@ -418,7 +581,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "13",
+    "id": "18",
     "slug": "intro-to-dall-e",
     "title": "Intro to Dall-E",
     "provider": "Scrimba",
@@ -450,40 +613,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "14",
-    "slug": "intro-to-model-context-protocol-mcp",
-    "title": "Intro to Model Context Protocol MCP",
-    "provider": "Scrimba",
-    "category": "ai-ml",
-    "categoryLabel": "AI & Machine Learning",
-    "tags": [
-      "AI / ML",
-      "MCP"
-    ],
-    "image": "/img/Certificates/images/Intro-To-Model-Context-Protocol-(MCP)-certificate.jpg",
-    "secondaryImage": "/img/mcp-1-3096.jpg",
-    "pdf": "/img/Certificates/pdfs/Intro-To-Model-Context-Protocol (MCP)-certificate.pdf",
-    "summary": "Learn the Model Context Protocol, a standardized way for AI models to interact with external tools and data sources. This course introduces you to MCP architecture, how to build MCP servers and clients, and how to integrate them with your AI applications for enhanced functionality.",
-    "descriptions": [
-      "Learn the Model Context Protocol, a standardized way for AI models to interact with external tools and data sources. This course introduces you to MCP architecture, how to build MCP servers and clients, and how to integrate them with your AI applications for enhanced functionality.",
-      "Master the fundamentals of MCP and learn how to extend AI models with access to custom tools and data sources for more powerful intelligent applications."
-    ],
-    "skills": [
-      "MCP architecture and concepts",
-      "Protocol specification",
-      "Building MCP servers",
-      "Building MCP clients",
-      "Tool definition and exposure",
-      "Resource management",
-      "Error handling",
-      "Integration with AI models",
-      "Security considerations",
-      "Real-world MCP applications"
-    ],
-    "featured": true
-  },
-  {
-    "id": "15",
+    "id": "19",
     "slug": "intro-to-nestjs",
     "title": "Intro to NestJS",
     "provider": "Scrimba",
@@ -515,7 +645,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "16",
+    "id": "20",
     "slug": "intro-to-supabase",
     "title": "Intro to Supabase",
     "provider": "Scrimba",
@@ -548,7 +678,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "17",
+    "id": "21",
     "slug": "intro-to-typescript",
     "title": "Intro to TypeScript",
     "provider": "Scrimba",
@@ -581,7 +711,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "18",
+    "id": "22",
     "slug": "intro-to-vite",
     "title": "Intro to Vite",
     "provider": "Scrimba",
@@ -613,7 +743,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "19",
+    "id": "23",
     "slug": "introduction-to-es6-plus",
     "title": "Introduction to ES6+",
     "provider": "Scrimba",
@@ -645,7 +775,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "20",
+    "id": "24",
     "slug": "learn-advanced-react",
     "title": "Learn Advanced React",
     "provider": "Scrimba",
@@ -678,40 +808,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "21",
-    "slug": "learn-ai-agents",
-    "title": "LearnAI Agents",
-    "provider": "Scrimba",
-    "category": "ai-ml",
-    "categoryLabel": "AI & Machine Learning",
-    "tags": [
-      "AI / ML",
-      "AI Agents"
-    ],
-    "image": "/img/Certificates/images/Learn-AI-Agents-certificate.jpg",
-    "secondaryImage": "/img/ai-agent-1-3096.jpg",
-    "pdf": "/img/Certificates/pdfs/Learn-AI-Agents-certificate.pdf",
-    "summary": "Master AI agents and autonomous systems. This course explores how to build intelligent agents that can reason, plan, and take actions. Learn about agent architectures, decision-making systems, and practical applications of AI agents in real-world scenarios.",
-    "descriptions": [
-      "Master AI agents and autonomous systems. This course explores how to build intelligent agents that can reason, plan, and take actions. Learn about agent architectures, decision-making systems, and practical applications of AI agents in real-world scenarios.",
-      "Discover the power of AI agents and learn to build autonomous systems that can solve complex problems."
-    ],
-    "skills": [
-      "Agent fundamentals",
-      "Agent architectures",
-      "Decision-making systems",
-      "Reinforcement learning",
-      "Planning algorithms",
-      "Knowledge representation",
-      "Multi-agent systems",
-      "Agent communication",
-      "Real-world applications",
-      "Building autonomous systems"
-    ],
-    "featured": true
-  },
-  {
-    "id": "22",
+    "id": "25",
     "slug": "learn-basic-javascript",
     "title": "Learn Basic JavaScript",
     "provider": "Scrimba",
@@ -743,7 +840,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "23",
+    "id": "26",
     "slug": "learn-context-engineering",
     "title": "Learn Context Engineering",
     "provider": "Scrimba",
@@ -775,7 +872,7 @@ export const certifications: Certification[] = [
     "featured": true
   },
   {
-    "id": "24",
+    "id": "27",
     "slug": "learn-d3.js",
     "title": "Learn D3.js",
     "provider": "Scrimba",
@@ -808,7 +905,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "25",
+    "id": "28",
     "slug": "learn-express.js",
     "title": "Learn Express.js",
     "provider": "Scrimba",
@@ -841,7 +938,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "26",
+    "id": "29",
     "slug": "learn-firebase",
     "title": "Learn Firebase",
     "provider": "Scrimba",
@@ -874,7 +971,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "27",
+    "id": "30",
     "slug": "learn-interactive-react",
     "title": "Learn Interactive React",
     "provider": "Scrimba",
@@ -907,7 +1004,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "28",
+    "id": "31",
     "slug": "learn-javascript",
     "title": "Learn JavaScript",
     "provider": "Scrimba",
@@ -939,7 +1036,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "29",
+    "id": "32",
     "slug": "learn-markdown",
     "title": "Learn Markdown",
     "provider": "Scrimba",
@@ -971,7 +1068,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "30",
+    "id": "33",
     "slug": "learn-modern-javascript",
     "title": "Learn Modern JavaScript",
     "provider": "Scrimba",
@@ -1003,7 +1100,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "31",
+    "id": "34",
     "slug": "learn-next.js",
     "title": "Learn Next.js",
     "provider": "Scrimba",
@@ -1036,7 +1133,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "32",
+    "id": "35",
     "slug": "learn-node.js",
     "title": "Learn Node.js",
     "provider": "Scrimba",
@@ -1069,7 +1166,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "33",
+    "id": "36",
     "slug": "learn-rag",
     "title": "Learn RAG",
     "provider": "Scrimba",
@@ -1101,7 +1198,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "34",
+    "id": "37",
     "slug": "learn-react-hooks-by-building-tic-tac-toe",
     "title": "Learn React Hooks by building Tic Tac Toe",
     "provider": "Scrimba",
@@ -1134,7 +1231,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "35",
+    "id": "38",
     "slug": "learn-react-styled-components",
     "title": "Learn React Styled Components",
     "provider": "Scrimba",
@@ -1167,7 +1264,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "36",
+    "id": "39",
     "slug": "learn-svelte-js",
     "title": "Learn Svelte JS",
     "provider": "Scrimba",
@@ -1200,7 +1297,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "37",
+    "id": "40",
     "slug": "learn-tailwind-css",
     "title": "Learn Tailwind CSS",
     "provider": "Scrimba",
@@ -1234,7 +1331,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "38",
+    "id": "41",
     "slug": "learn-to-build-a-mobile-app-with-firebase",
     "title": "Learn To Build A Mobile App with Firebase",
     "provider": "Scrimba",
@@ -1267,7 +1364,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "39",
+    "id": "42",
     "slug": "learn-to-code-with-ai",
     "title": "Learn to Code with AI",
     "provider": "Scrimba",
@@ -1300,7 +1397,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "40",
+    "id": "43",
     "slug": "learn-typescript",
     "title": "Learn TypeScript",
     "provider": "Scrimba",
@@ -1333,7 +1430,7 @@ export const certifications: Certification[] = [
     "featured": true
   },
   {
-    "id": "41",
+    "id": "44",
     "slug": "learn-ui-design",
     "title": "Learn UI Design",
     "provider": "Scrimba",
@@ -1365,7 +1462,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "42",
+    "id": "45",
     "slug": "learn-unit-testing",
     "title": "Learn Unit Testing",
     "provider": "Scrimba",
@@ -1398,7 +1495,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "43",
+    "id": "46",
     "slug": "learn-vue",
     "title": "Learn Vue",
     "provider": "Scrimba",
@@ -1431,7 +1528,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "44",
+    "id": "47",
     "slug": "learnmarkdown",
     "title": "LearnMarkdown",
     "provider": "Scrimba",
@@ -1463,7 +1560,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "45",
+    "id": "48",
     "slug": "openai-s-assistants-api",
     "title": "OpenAI's Assistants API",
     "provider": "Scrimba",
@@ -1496,7 +1593,7 @@ export const certifications: Certification[] = [
     "featured": false
   },
   {
-    "id": "46",
+    "id": "49",
     "slug": "prompt-engineering-for-web-developers",
     "title": "Prompt Engineering For Web Developers",
     "provider": "Scrimba",
@@ -1526,103 +1623,6 @@ export const certifications: Certification[] = [
       "Advanced prompt patterns"
     ],
     "featured": false
-  },
-  {
-    "id": "47",
-    "slug": "the-ai-engineering-path",
-    "title": "The AI Engineering Path",
-    "provider": "Scrimba",
-    "category": "ai-ml",
-    "categoryLabel": "AI & Machine Learning",
-    "tags": [
-      "AI / ML",
-      "AI Agents"
-    ],
-    "image": "/img/Certificates/images/The-AI-Engineering-Path-certificate.jpg",
-    "secondaryImage": "/img/Certificates/images/The-AI-Engineering-Path-certificate.jpg",
-    "pdf": "/img/Certificates/pdfs/The-AI-Engineering-Path-certificate.pdf",
-    "summary": "Complete learning path for AI engineering from fundamentals to advanced applications. This comprehensive course covers machine learning, deep learning, neural networks, and practical AI engineering skills. Learn to build, train, and deploy AI models for real-world problems.",
-    "descriptions": [
-      "Complete learning path for AI engineering from fundamentals to advanced applications. This comprehensive course covers machine learning, deep learning, neural networks, and practical AI engineering skills. Learn to build, train, and deploy AI models for real-world problems.",
-      "Master the complete AI engineering path and become proficient in modern AI and machine learning technologies."
-    ],
-    "skills": [
-      "Machine learning fundamentals",
-      "Supervised learning algorithms",
-      "Unsupervised learning",
-      "Deep learning basics",
-      "Neural networks",
-      "Computer vision",
-      "Natural language processing",
-      "Model evaluation and optimization",
-      "Deployment and production",
-      "Building AI applications"
-    ],
-    "featured": true
-  },
-  {
-    "id": "48",
-    "slug": "the-front-end-developer-career-path",
-    "title": "The Front-End Developer Career Path",
-    "provider": "Scrimba",
-    "category": "fullstack",
-    "categoryLabel": "Fullstack & Frameworks",
-    "tags": [
-      "Fullstack"
-    ],
-    "image": "/img/Certificates/images/The-Front-End-Developer-Career-Path-certificate.jpg",
-    "secondaryImage": "/img/front-end-1-3096.jpg",
-    "pdf": "/img/Certificates/pdfs/The-Front-End-Developer-Career-Path-certificate.pdf",
-    "summary": "Complete career path for aspiring front-end developers. This comprehensive program covers HTML, CSS, JavaScript, modern frameworks, and professional development practices. Learn everything you need to launch a successful front-end development career.",
-    "descriptions": [
-      "Complete career path for aspiring front-end developers. This comprehensive program covers HTML, CSS, JavaScript, modern frameworks, and professional development practices. Learn everything you need to launch a successful front-end development career.",
-      "Master front-end development from basics to advanced techniques and prepare for a rewarding career."
-    ],
-    "skills": [
-      "HTML fundamentals",
-      "CSS and responsive design",
-      "JavaScript mastery",
-      "React and components",
-      "State management",
-      "API integration",
-      "Testing and debugging",
-      "Performance optimization",
-      "Career development",
-      "Building professional portfolio"
-    ],
-    "featured": false
-  },
-  {
-    "id": "49",
-    "slug": "the-fullstack-developer-path",
-    "title": "The Fullstack Developer Path",
-    "provider": "Scrimba",
-    "category": "fullstack",
-    "categoryLabel": "Fullstack & Frameworks",
-    "tags": [
-      "Fullstack"
-    ],
-    "image": "/img/Certificates/images/The-Fullstack-Developer-Path-certificate.jpg",
-    "secondaryImage": "/img/fullstack-1-3096.jpg",
-    "pdf": "/img/Certificates/pdfs/The-Fullstack-Developer-Path-certificate.pdf",
-    "summary": "Complete path to becoming a fullstack developer. This comprehensive program covers both front-end and back-end technologies, databases, deployment, and building complete web applications. Learn to create end-to-end solutions for modern web applications.",
-    "descriptions": [
-      "Complete path to becoming a fullstack developer. This comprehensive program covers both front-end and back-end technologies, databases, deployment, and building complete web applications. Learn to create end-to-end solutions for modern web applications.",
-      "Master fullstack development and build complete, production-ready web applications from scratch."
-    ],
-    "skills": [
-      "Front-end fundamentals",
-      "HTML, CSS, JavaScript",
-      "Modern frameworks",
-      "Back-end development",
-      "Server-side languages",
-      "Database design and management",
-      "API development",
-      "Authentication and security",
-      "Deployment and scaling",
-      "Full application architecture"
-    ],
-    "featured": true
   }
 ];
 
