@@ -25,6 +25,7 @@ export interface CareerItem {
 }
 
 export const careerItems: CareerItem[] = [
+  // 1. GoldTending
   {
     id: "01",
     slug: "goldtending",
@@ -52,8 +53,149 @@ export const careerItems: CareerItem[] = [
     ],
     featured: true
   },
+
+  // 2. Trimble (SketchUp)
   {
     id: "02",
+    slug: "sketchup",
+    title: "SketchUp (Trimble)",
+    role: "Sr. QA Engineer & Team Lead",
+    company: "SketchUp (Trimble)",
+    location: "Boulder, CO",
+    domain: "cloud-ai-web",
+    domainLabel: "Cloud, AI & Web Architecture",
+    tags: ["SketchUp", "Ruby API", "3D Graphics", "Test Automation", "Agile Leadership"],
+    image: "/img/SketchUp-tablet-480.jpg",
+    heroImage: "/img/SketchUp-extensibility-3096.jpg",
+    summary: "Led QA and extensibility test engineering for SketchUp at Trimble, the world's most widely used 3D modeling tool, overseeing Ruby API integrations and 3D web platforms.",
+    contentTitle: "Scaling 3D Extensibility & Developer Ecosystems",
+    content: [
+      "Led the Extensibility and QA engineering efforts for SketchUp at Trimble, ensuring that third-party developers, architects, and designers had a rock-solid platform for 3D modeling extensions.",
+      "Managed test automation frameworks for the SketchUp Ruby API, 3D Warehouse, and cross-platform desktop/web engines.",
+      "Bridged communication between core C++ rendering engineers, product designers, and global developer partners to maintain flawless release quality across millions of active users."
+    ],
+    achievements: [
+      "Architected automated API testing matrices for the SketchUp Ruby Extensibility platform.",
+      "Led agile QA sprints ensuring zero-regression releases for global desktop and web applications.",
+      "Collaborated on 3D geometry engine validation and cloud-connected collaboration tools."
+    ],
+    featured: true
+  },
+
+  // 3. World Bank
+  {
+    id: "03",
+    slug: "worldbank",
+    title: "World Bank — Nile Basin Initiative",
+    role: "System Architect & Database Consultant",
+    company: "World Bank",
+    location: "Addis Ababa, Ethiopia",
+    domain: "aerospace-specialized",
+    domainLabel: "Aerospace & Mission-Critical Systems",
+    tags: ["World Bank", "System Architecture", "Hydrological Modeling", "Databases", "International"],
+    image: "/img/Me-In-Ethiopia-480.jpg",
+    heroImage: "/img/Nile-River-Pictures-Blue-3096.jpg",
+    summary: "Served as lead system architect and database consultant in Addis Ababa, Ethiopia, for the World Bank's Nile Basin Decision Support System (DSS), managing trans-boundary water resource analytics across 10 nations.",
+    contentTitle: "Trans-boundary Water Resource Decision Support for 10 Nations",
+    content: [
+      "Deployed to Addis Ababa, Ethiopia, to architect the core database and analytical systems for the Nile Basin Initiative Decision Support System (DSS), funded by the World Bank.",
+      "The Nile Basin DSS is a multi-criteria spatial decision support platform used by 10 riparian countries to model river basin hydrology, optimize dam operations, evaluate agricultural irrigation impact, and foster international cooperation.",
+      "Architected high-reliability relational data models, GIS integration schemas, and simulation data pipelines to ensure absolute precision in cross-border hydrological planning."
+    ],
+    achievements: [
+      "Architected the multi-tiered database infrastructure for international hydrological simulation models.",
+      "Collaborated with international government ministers, scientists, and environmental engineers across Africa and Europe.",
+      "Ensured rigorous data integrity and high availability for mission-critical environmental forecasting."
+    ],
+    featured: true
+  },
+
+  // 4. ClickBank
+  {
+    id: "04",
+    slug: "clickbank",
+    title: "ClickBank E-Commerce",
+    role: "QA Manager / Team Lead (Agile)",
+    company: "ClickBank",
+    location: "Broomfield, CO",
+    domain: "cloud-ai-web",
+    domainLabel: "Cloud, AI & Web Architecture",
+    tags: ["E-Commerce", "High-Volume FinTech", "Agile QA", "PCI Compliance", "CI/CD"],
+    image: "/img/Data-Center-numbers-480.jpg",
+    heroImage: "/img/Enterprise-center-3096.jpg",
+    summary: "Led Agile QA teams managing high-volume payment processing, fraud prevention pipelines, and transactional e-commerce infrastructure.",
+    contentTitle: "High-Throughput FinTech & Mission-Critical Transaction Quality",
+    content: [
+      "Managed the Quality Assurance team at ClickBank, overseeing a multi-million dollar daily transactional e-commerce and affiliate marketing platform.",
+      "Championed Agile testing methodologies, CI/CD pipeline integration, and automated regression testing across complex billing engines, payment gateways, and fraud detection algorithms.",
+      "Guaranteed strict PCI-DSS compliance, data security, and sub-second payment settlement under peak global traffic surges."
+    ],
+    achievements: [
+      "Transformed QA processes into a high-velocity automated Agile testing organization.",
+      "Reduced critical production bugs by over 60% through automated integration testing.",
+      "Maintained 99.99% payment transaction reliability across millions of global transactions."
+    ],
+    featured: true
+  },
+
+  // 5. Rebit
+  {
+    id: "05",
+    slug: "rebit",
+    title: "Rebit Incorporated",
+    role: "Director IT / QA, Co-Founder",
+    company: "Rebit Incorporated",
+    location: "Longmont, CO",
+    domain: "enterprise-storage",
+    domainLabel: "Enterprise Storage & Hardware Systems",
+    tags: ["Cloud Backup", "Continuous Data Protection", "Co-Founder", "Disaster Recovery"],
+    image: "/img/Rebit-storage-480.jpg",
+    heroImage: "/img/Rebit-cloud-3096.jpg",
+    summary: "Co-founded Rebit to deliver revolutionary zero-click continuous data protection (CDP) and cloud backup software for consumers and enterprises.",
+    contentTitle: "Zero-Configuration Continuous Data Protection & Cloud Backup",
+    content: [
+      "Co-founded Rebit Inc. to solve the epidemic of unbacked-up data. We invented 'ridiculously simple' continuous data protection software that automatically backs up every change in real time.",
+      "Directed both the IT enterprise backbone and QA engineering organizations, orchestrating comprehensive disk driver testing, snapshot recovery testing, and cloud synchronization.",
+      "Built multi-terabyte virtualized test farms simulating millions of real-world file system modifications and hard drive failures."
+    ],
+    achievements: [
+      "Built the entire IT data center and QA testing infrastructure from ground up.",
+      "Pioneered continuous backup validation routines adopted across commercial consumer software.",
+      "Supported successful product launches distributed globally in major retail stores and online."
+    ],
+    featured: true
+  },
+
+  // 6. Benchmark
+  {
+    id: "06",
+    slug: "benchmark",
+    title: "Benchmark Tape Systems",
+    role: "Director IT / SCM, Co-Founder",
+    company: "Benchmark Tape Systems",
+    location: "Boulder, CO",
+    domain: "enterprise-storage",
+    domainLabel: "Enterprise Storage & Hardware Systems",
+    tags: ["DLT Tape", "Supply Chain", "SCM", "Manufacturing", "Enterprise Storage"],
+    image: "/img/Storage-DLT-Tape-Drive-480.jpg",
+    heroImage: "/img/Storage-Tape-Drive-Blue-Library-3096.jpg",
+    summary: "Co-founded Benchmark Tape Systems to produce high-value DLT tape automation and backup drives for enterprise IT infrastructures.",
+    contentTitle: "Enterprise DLT Tape Automation & Global Supply Chain",
+    content: [
+      "Co-founded Benchmark Tape Systems, designing and manufacturing enterprise-class Digital Linear Tape (DLT) automation systems.",
+      "Led the global Supply Chain Management (SCM) systems and corporate IT architecture, integrating enterprise ERPs, automated robotic test cells, and international assembly lines.",
+      "Achieved industry-leading MTBF reliability ratings for tape drives operating continuously in global corporate data centers."
+    ],
+    achievements: [
+      "Architected end-to-end IT and ERP data systems connecting US engineering with offshore manufacturing.",
+      "Co-founded a high-growth storage venture that became a major player in enterprise tape backup.",
+      "Delivered high-throughput automated drive diagnostic stations for manufacturing quality control."
+    ]
+  },
+
+  // 7. DataSonix (US Patent 1999)
+  {
+    id: "07",
     slug: "datasonix",
     title: "DataSonix Incorporated",
     role: "Director IT / QA, Co-Founder",
@@ -83,161 +225,10 @@ export const careerItems: CareerItem[] = [
     ],
     featured: true
   },
-  {
-    id: "03",
-    slug: "worldbank",
-    title: "World Bank — Nile Basin Initiative",
-    role: "System Architect & Database Consultant",
-    company: "World Bank / Nile Basin DSS",
-    location: "Addis Ababa, Ethiopia",
-    domain: "aerospace-specialized",
-    domainLabel: "Aerospace & Mission-Critical Systems",
-    tags: ["World Bank", "System Architecture", "Hydrological Modeling", "Databases", "International"],
-    image: "/img/Me-In-Ethiopia-480.jpg",
-    heroImage: "/img/Nile-River-Pictures-Blue-3096.jpg",
-    summary: "Served as lead system architect and database consultant in Addis Ababa, Ethiopia, for the World Bank's Nile Basin Decision Support System (DSS), managing trans-boundary water resource analytics across 10 nations.",
-    contentTitle: "Trans-boundary Water Resource Decision Support for 10 Nations",
-    content: [
-      "Deployed to Addis Ababa, Ethiopia, to architect the core database and analytical systems for the Nile Basin Initiative Decision Support System (DSS), funded by the World Bank.",
-      "The Nile Basin DSS is a multi-criteria spatial decision support platform used by 10 riparian countries to model river basin hydrology, optimize dam operations, evaluate agricultural irrigation impact, and foster international cooperation.",
-      "Architected high-reliability relational data models, GIS integration schemas, and simulation data pipelines to ensure absolute precision in cross-border hydrological planning."
-    ],
-    achievements: [
-      "Architected the multi-tiered database infrastructure for international hydrological simulation models.",
-      "Collaborated with international government ministers, scientists, and environmental engineers across Africa and Europe.",
-      "Ensured rigorous data integrity and high availability for mission-critical environmental forecasting."
-    ],
-    featured: true
-  },
-  {
-    id: "04",
-    slug: "technetics",
-    title: "Technetics Incorporated",
-    role: "Aerospace Power Design Engineer",
-    company: "Technetics Incorporated",
-    location: "Boulder, CO",
-    domain: "aerospace-specialized",
-    domainLabel: "Aerospace & Mission-Critical Systems",
-    tags: ["NASA Space Shuttle", "Nuclear Submarines", "Power Electronics", "Hardware Design", "Mil-Spec"],
-    image: "/img/Space-Shuttle-2-480.jpg",
-    heroImage: "/img/Outer-Space-3096.jpg",
-    summary: "Designed military and aerospace power supplies deployed on the NASA Space Shuttle and United States Navy nuclear submarines.",
-    contentTitle: "Zero-Tolerance Power Systems for Space Exploration & Defense",
-    content: [
-      "As an Aerospace Power Design Engineer at Technetics, I designed, analyzed, and qualified ultra-high-reliability switching power supplies for the NASA Space Shuttle and US Navy nuclear submarines.",
-      "Working within strict military (Mil-Spec) and space-flight standards, every component had to withstand extreme thermal fluctuations, radiation, high vibration, and electromagnetic interference.",
-      "This intense hardware engineering background instilled in me the unwavering conviction that software, like aerospace hardware, must be architected with fault tolerance, redundancy, and zero-defect quality."
-    ],
-    achievements: [
-      "Engineered power conversion circuitry certified for NASA Space Shuttle payload operations.",
-      "Designed and qualified ultra-quiet DC-DC power supplies for naval nuclear submarine applications.",
-      "Conducted worst-case circuit analysis, thermal stress testing, and MTBF reliability modeling."
-    ],
-    featured: true
-  },
-  {
-    id: "05",
-    slug: "sketchup",
-    title: "SketchUp (Trimble)",
-    role: "Sr. QA Engineer & Team Lead",
-    company: "SketchUp / Trimble",
-    location: "Boulder, CO",
-    domain: "cloud-ai-web",
-    domainLabel: "Cloud, AI & Web Architecture",
-    tags: ["SketchUp", "Ruby API", "3D Graphics", "Test Automation", "Agile Leadership"],
-    image: "/img/SketchUp-tablet-480.jpg",
-    heroImage: "/img/SketchUp-extensibility-3096.jpg",
-    summary: "Led QA and extensibility test engineering for SketchUp, the world's most widely used 3D modeling tool, overseeing Ruby API integrations and 3D web platforms.",
-    contentTitle: "Scaling 3D Extensibility & Developer Ecosystems",
-    content: [
-      "Led the Extensibility and QA engineering efforts for SketchUp at Trimble, ensuring that third-party developers, architects, and designers had a rock-solid platform for 3D modeling extensions.",
-      "Managed test automation frameworks for the SketchUp Ruby API, 3D Warehouse, and cross-platform desktop/web engines.",
-      "Bridged communication between core C++ rendering engineers, product designers, and global developer partners to maintain flawless release quality across millions of active users."
-    ],
-    achievements: [
-      "Architected automated API testing matrices for the SketchUp Ruby Extensibility platform.",
-      "Led agile QA sprints ensuring zero-regression releases for global desktop and web applications.",
-      "Collaborated on 3D geometry engine validation and cloud-connected collaboration tools."
-    ],
-    featured: true
-  },
-  {
-    id: "06",
-    slug: "clickbank",
-    title: "ClickBank E-Commerce",
-    role: "QA Manager / Team Lead (Agile)",
-    company: "ClickBank",
-    location: "Broomfield, CO",
-    domain: "cloud-ai-web",
-    domainLabel: "Cloud, AI & Web Architecture",
-    tags: ["E-Commerce", "High-Volume FinTech", "Agile QA", "PCI Compliance", "CI/CD"],
-    image: "/img/Data-Center-numbers-480.jpg",
-    heroImage: "/img/Enterprise-center-3096.jpg",
-    summary: "Led Agile QA teams managing high-volume payment processing, fraud prevention pipelines, and transactional e-commerce infrastructure.",
-    contentTitle: "High-Throughput FinTech & Mission-Critical Transaction Quality",
-    content: [
-      "Managed the Quality Assurance team at ClickBank, overseeing a multi-million dollar daily transactional e-commerce and affiliate marketing platform.",
-      "Championed Agile testing methodologies, CI/CD pipeline integration, and automated regression testing across complex billing engines, payment gateways, and fraud detection algorithms.",
-      "Guaranteed strict PCI-DSS compliance, data security, and sub-second payment settlement under peak global traffic surges."
-    ],
-    achievements: [
-      "Transformed QA processes into a high-velocity automated Agile testing organization.",
-      "Reduced critical production bugs by over 60% through automated integration testing.",
-      "Maintained 99.99% payment transaction reliability across millions of global transactions."
-    ]
-  },
-  {
-    id: "07",
-    slug: "rebit",
-    title: "Rebit Incorporated",
-    role: "Director IT / QA, Co-Founder",
-    company: "Rebit Incorporated",
-    location: "Longmont, CO",
-    domain: "enterprise-storage",
-    domainLabel: "Enterprise Storage & Hardware Systems",
-    tags: ["Cloud Backup", "Continuous Data Protection", "Co-Founder", "Disaster Recovery"],
-    image: "/img/Rebit-storage-480.jpg",
-    heroImage: "/img/Rebit-cloud-3096.jpg",
-    summary: "Co-founded Rebit to deliver revolutionary zero-click continuous data protection (CDP) and cloud backup software for consumers and enterprises.",
-    contentTitle: "Zero-Configuration Continuous Data Protection & Cloud Backup",
-    content: [
-      "Co-founded Rebit Inc. to solve the epidemic of unbacked-up data. We invented 'ridiculously simple' continuous data protection software that automatically backs up every change in real time.",
-      "Directed both the IT enterprise backbone and QA engineering organizations, orchestrating comprehensive disk driver testing, snapshot recovery testing, and cloud synchronization.",
-      "Built multi-terabyte virtualized test farms simulating millions of real-world file system modifications and hard drive failures."
-    ],
-    achievements: [
-      "Built the entire IT data center and QA testing infrastructure from ground up.",
-      "Pioneered continuous backup validation routines adopted across commercial consumer software.",
-      "Supported successful product launches distributed globally in major retail stores and online."
-    ]
-  },
+
+  // 8. StorageTek
   {
     id: "08",
-    slug: "benchmark",
-    title: "Benchmark Tape Systems",
-    role: "Director IT / SCM, Co-Founder",
-    company: "Benchmark Tape Systems",
-    location: "Boulder, CO",
-    domain: "enterprise-storage",
-    domainLabel: "Enterprise Storage & Hardware Systems",
-    tags: ["DLT Tape", "Supply Chain", "SCM", "Manufacturing", "Enterprise Storage"],
-    image: "/img/Storage-DLT-Tape-Drive-480.jpg",
-    heroImage: "/img/Storage-Tape-Drive-Blue-Library-3096.jpg",
-    summary: "Co-founded Benchmark Tape Systems to produce high-value DLT tape automation and backup drives for enterprise IT infrastructures.",
-    contentTitle: "Enterprise DLT Tape Automation & Global Supply Chain",
-    content: [
-      "Co-founded Benchmark Tape Systems, designing and manufacturing enterprise-class Digital Linear Tape (DLT) automation systems.",
-      "Led the global Supply Chain Management (SCM) systems and corporate IT architecture, integrating enterprise ERPs, automated robotic test cells, and international assembly lines.",
-      "Achieved industry-leading MTBF reliability ratings for tape drives operating continuously in global corporate data centers."
-    ],
-    achievements: [
-      "Architected end-to-end IT and ERP data systems connecting US engineering with offshore manufacturing.",
-      "Co-founded a high-growth storage venture that became a major player in enterprise tape backup.",
-      "Delivered high-throughput automated drive diagnostic stations for manufacturing quality control."
-    ]
-  },
-  {
-    id: "09",
     slug: "storagetek",
     title: "StorageTek (Storage Technology Corp)",
     role: "Sr. Engineer — Engineering Tools & Diagnostics",
@@ -261,6 +252,35 @@ export const careerItems: CareerItem[] = [
       "Mentored junior test engineers on storage protocols, hardware-level debugging, and automation."
     ]
   },
+
+  // 9. Technetics
+  {
+    id: "09",
+    slug: "technetics",
+    title: "Technetics Incorporated",
+    role: "Aerospace Power Design Engineer",
+    company: "Technetics Incorporated",
+    location: "Boulder, CO",
+    domain: "aerospace-specialized",
+    domainLabel: "Aerospace & Mission-Critical Systems",
+    tags: ["NASA Space Shuttle", "Nuclear Submarines", "Power Electronics", "Hardware Design", "Mil-Spec"],
+    image: "/img/Space-Shuttle-2-480.jpg",
+    heroImage: "/img/Outer-Space-3096.jpg",
+    summary: "Designed military and aerospace power supplies deployed on the NASA Space Shuttle and United States Navy nuclear submarines.",
+    contentTitle: "Zero-Tolerance Power Systems for Space Exploration & Defense",
+    content: [
+      "As an Aerospace Power Design Engineer at Technetics, I designed, analyzed, and qualified ultra-high-reliability switching power supplies for the NASA Space Shuttle and US Navy nuclear submarines.",
+      "Working within strict military (Mil-Spec) and space-flight standards, every component had to withstand extreme thermal fluctuations, radiation, high vibration, and electromagnetic interference.",
+      "This intense hardware engineering background instilled in me the unwavering conviction that software, like aerospace hardware, must be architected with fault tolerance, redundancy, and zero-defect quality."
+    ],
+    achievements: [
+      "Engineered power conversion circuitry certified for NASA Space Shuttle payload operations.",
+      "Designed and qualified ultra-quiet DC-DC power supplies for naval nuclear submarine applications.",
+      "Conducted worst-case circuit analysis, thermal stress testing, and MTBF reliability modeling."
+    ]
+  },
+
+  // 10. UCCS AI
   {
     id: "10",
     slug: "uccs-ai",
@@ -286,6 +306,8 @@ export const careerItems: CareerItem[] = [
       "Synthesized academic AI principles with 30 years of systems engineering experience."
     ]
   },
+
+  // 11. TC Solutions
   {
     id: "11",
     slug: "tc-solutions",
@@ -311,6 +333,8 @@ export const careerItems: CareerItem[] = [
       "Enhanced training regimen efficiency through structured data modeling."
     ]
   },
+
+  // 12. Hockey Coaching
   {
     id: "12",
     slug: "hockey-coaching",
@@ -336,9 +360,10 @@ export const careerItems: CareerItem[] = [
       "Colorado State Championship & Golden High School Championship Title Winner.",
       "Coached CU Women's Ice Hockey program to the National Tournament.",
       "Mentored hundreds of young athletes into collegiate players and disciplined leaders."
-    ],
-    featured: true
+    ]
   },
+
+  // 13. Goalie Stopper
   {
     id: "13",
     slug: "goalie-stopper",
@@ -364,6 +389,8 @@ export const careerItems: CareerItem[] = [
       "Trained elite male and female goaltenders to collegiate and junior levels."
     ]
   },
+
+  // 14. Musician Bass
   {
     id: "14",
     slug: "musician-bass",
@@ -389,6 +416,8 @@ export const careerItems: CareerItem[] = [
       "Integrated audio production and mixing techniques into live audio configurations."
     ]
   },
+
+  // 15. KGNU Radio
   {
     id: "15",
     slug: "kgnu-radio",
