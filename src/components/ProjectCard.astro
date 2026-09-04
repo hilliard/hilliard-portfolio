@@ -1,0 +1,103 @@
+---
+// src/components/ProjectCard.astro
+import type { CareerItem } from '../data/career';
+
+interface Props {
+  job: CareerItem;
+}
+
+const { job } = Astro.props;
+---
+
+<div
+  data-filter-target="item"
+  data-tags={job.tags.join(',')}
+  data-title={`${job.company} ${job.role} ${job.title}`}
+  data-desc={job.summary}
+  data-category={job.domain}
+  class="glass-card glass-card-interactive rounded-xl overflow-hidden flex flex-col justify-between group transition-all duration-300"
+>
+  <div>
+    <!-- Media Preview -->
+    <a href={`/work/${job.slug}`} class="block relative aspect-[16/9] overflow-hidden bg-mono-900 border-b border-mono-800/80">
+      <img
+        src={job.image}
+        alt={job.title}
+        loading="lazy"
+        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+        onerror="this.src='/img/hilliard-logo4.png'; this.classList.add('object-contain', 'p-8');"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-mono-950/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+
+      <!-- Domain Category Badge -->
+      <div class="absolute top-3 left-3">
+        <span class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-mono-950/80 text-mono-200 border border-mono-700/80 backdrop-blur-md">
+          {job.domainLabel}
+        </span>
+      </div>
+
+      <!-- Patent or Special Badge -->
+      {job.patent && (
+        <div class="absolute top-3 right-3">
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/20 text-gold-300 border border-amber-500/50 backdrop-blur-md flex items-center gap-1">
+            <span>★</span> US Patent {job.patent.year}
+          </span>
+        </div>
+      )}
+    </a>
+
+    <!-- Card Body -->
+    <div class="p-6">
+      <div class="flex items-baseline justify-between gap-2 flex-wrap">
+        <h3 class="text-lg font-bold text-mono-50 font-mono tracking-tight group-hover:text-accent transition-colors">
+          <a href={`/work/${job.slug}`}>
+            {job.company}
+          </a>
+        </h3>
+        {job.location && (
+          <span class="text-xs font-mono text-mono-400">{job.location}</span>
+        )}
+      </div>
+
+      <div class="text-xs font-mono font-semibold text-accent mt-0.5">
+        {job.role}
+      </div>
+
+      <p class="text-xs text-mono-300 mt-3 leading-relaxed line-clamp-3">
+        {job.summary}
+      </p>
+
+      <!-- Key Achievements Highlights -->
+      {job.achievements && job.achievements.length > 0 && (
+        <ul class="mt-4 space-y-1.5 border-t border-mono-800/60 pt-3 text-[11px] text-mono-400">
+          {job.achievements.slice(0, 2).map((achievement) => (
+            <li class="flex items-start gap-2">
+              <span class="text-accent shrink-0">▸</span>
+              <span class="line-clamp-1">{achievement}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-1.5 mt-4">
+        {job.tags.slice(0, 4).map((tag) => (
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-mono-900 text-mono-300 border border-mono-800">
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Card Action Footer -->
+  <div class="p-6 pt-0 mt-2 flex items-center justify-between gap-3 text-xs font-mono">
+    <a
+      href={`/work/${job.slug}`}
+      class="text-accent hover:text-gold-300 font-semibold flex items-center gap-1.5 group-hover:translate-x-1 transition-transform"
+    >
+      <span>Read Case Study & Architecture</span>
+      <span>→</span>
+    </a>
+  </div>
+</div>

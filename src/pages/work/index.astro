@@ -1,0 +1,95 @@
+---
+// src/pages/work/index.astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { careerItems, careerDomains } from '../../data/career';
+---
+
+<BaseLayout
+  title="Career Milestones & Architecture History | Hilliard M. Scott"
+  description="Explore the 30+ year engineering career of Hilliard M. Scott: Enterprise storage, US Patent holder, aerospace power systems for NASA Space Shuttle, cloud e-commerce, and modern AI."
+>
+  <div class="space-y-12" data-controller="filter">
+    <!-- Header -->
+    <div class="space-y-4 max-w-3xl">
+      <div class="inline-flex items-center gap-2 text-xs font-mono text-accent uppercase tracking-widest font-bold">
+        <span>●</span> 30+ YEARS OF SYSTEMS ENGINEERING
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black font-mono text-mono-50 tracking-tight">
+        Career Milestones & Architecture
+      </h1>
+      <p class="text-sm sm:text-base text-mono-300 leading-relaxed font-sans">
+        A documented track record across aerospace power electronics, enterprise automated storage libraries, US patent innovation, startup co-founding, cloud scale e-commerce, and championship athletic coaching.
+      </p>
+    </div>
+
+    <!-- Search & Filter Controls -->
+    <div class="glass-card rounded-2xl p-6 border-mono-800 space-y-5">
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
+        <div class="relative w-full sm:max-w-md">
+          <svg class="w-4 h-4 text-mono-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input
+            type="text"
+            data-filter-target="input"
+            data-action="input->filter#search"
+            placeholder="Search roles, companies, systems (e.g. StorageTek, Patent, Space Shuttle)..."
+            class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-mono-900 border border-mono-800 text-mono-50 placeholder-mono-400 focus:outline-none focus:border-accent font-mono text-xs sm:text-sm transition-colors"
+          />
+        </div>
+
+        <div class="flex items-center justify-between w-full sm:w-auto gap-4 font-mono text-xs">
+          <span data-filter-target="counter" class="text-mono-300 font-semibold px-3 py-1 rounded bg-mono-900 border border-mono-800">
+            {careerItems.length} milestones
+          </span>
+          <button
+            type="button"
+            data-action="click->filter#clearSearch"
+            class="text-mono-400 hover:text-accent transition-colors"
+          >
+            Clear Filters
+          </button>
+        </div>
+      </div>
+
+      <!-- Domain Category Tags -->
+      <div class="flex flex-wrap gap-2 pt-2 border-t border-mono-800/60">
+        {careerDomains.map((dom) => (
+          <button
+            type="button"
+            data-filter-target="tag"
+            data-tag={dom.id}
+            data-action="click->filter#filterByTag"
+            class={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-all cursor-pointer border ${
+              dom.id === 'all'
+                ? 'bg-accent text-mono-950 border-accent font-bold'
+                : 'bg-mono-900 text-mono-300 border-mono-800 hover:border-mono-700 hover:text-mono-100'
+            }`}
+          >
+            {dom.label}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div
+      data-filter-target="emptyState"
+      class="glass-card rounded-2xl p-12 text-center hidden space-y-3"
+    >
+      <div class="text-3xl">🔍</div>
+      <h3 class="text-base font-bold font-mono text-mono-200">No matching milestones found</h3>
+      <p class="text-xs text-mono-400 max-w-sm mx-auto">
+        Try adjusting your search query or selecting a different category domain.
+      </p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {careerItems.map((job) => (
+        <ProjectCard job={job} />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

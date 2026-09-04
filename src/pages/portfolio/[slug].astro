@@ -1,0 +1,22 @@
+---
+// src/pages/portfolio/[slug].astro
+import { careerItems } from '../../data/career';
+import { certifications } from '../../data/certifications';
+
+const { slug } = Astro.params;
+
+// Check if slug matches career item
+const matchingWork = careerItems.find((j) => j.slug === slug || slug?.includes(j.slug));
+if (matchingWork) {
+  return Astro.redirect(`/work/${matchingWork.slug}`);
+}
+
+// Check if slug matches cert
+const matchingCert = certifications.find((c) => c.slug === slug || slug?.includes(c.slug));
+if (matchingCert) {
+  return Astro.redirect(`/certifications/${matchingCert.slug}`);
+}
+
+// Default to work directory
+return Astro.redirect('/work');
+---

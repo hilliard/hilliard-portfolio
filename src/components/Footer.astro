@@ -1,0 +1,70 @@
+---
+// src/components/Footer.astro
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="w-full border-t border-mono-800/80 bg-mono-950/90 text-mono-400 py-12 px-4 sm:px-6 lg:px-8 font-mono text-xs mt-20">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- Bio & Location -->
+    <div class="md:col-span-2 space-y-3">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
+        <span class="font-bold text-mono-100 text-sm tracking-tight">HILLIARD M. SCOTT</span>
+      </div>
+      <p class="text-mono-400 max-w-md leading-relaxed text-xs">
+        Hardware Engineer, Software Architect, US Patent Holder, USA Hockey Level 5 Master Coach, and Custom Bass Builder. Bridging the physical and digital realms from Westminster, Colorado.
+      </p>
+      <div class="text-[11px] text-mono-400">
+        Founder of GoldTending Incorporated • Co-Founder of DataSonix, Rebit & Benchmark Tape Systems
+      </div>
+    </div>
+
+    <!-- Quick Navigation -->
+    <div class="space-y-2">
+      <div class="font-bold text-mono-200 tracking-wider uppercase text-[11px] text-accent">Navigation</div>
+      <ul class="space-y-1.5">
+        <li><a href="/work" class="hover:text-mono-100 transition-colors">Career & Work (19+)</a></li>
+        <li><a href="/certifications" class="hover:text-mono-100 transition-colors">Certifications (49+)</a></li>
+        <li><a href="/philosophy" class="hover:text-mono-100 transition-colors">Engineering & STOPPER</a></li>
+        <li><a href="/resume" class="hover:text-mono-100 transition-colors">Resume Replacement</a></li>
+        <li><a href="/contact" class="hover:text-mono-100 transition-colors">Contact / Consultation</a></li>
+      </ul>
+    </div>
+
+    <!-- Social & Contact -->
+    <div class="space-y-2">
+      <div class="font-bold text-mono-200 tracking-wider uppercase text-[11px] text-accent">Connect</div>
+      <ul class="space-y-1.5">
+        <li>
+          <a href="mailto:hilliards@gmail.com" class="hover:text-mono-100 transition-colors flex items-center gap-2">
+            <span>✉</span> hilliards@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-mono-100 transition-colors flex items-center gap-2">
+            <span>🔗</span> LinkedIn Profile
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-mono-100 transition-colors flex items-center gap-2">
+            <span>💻</span> GitHub
+          </a>
+        </li>
+        <li class="pt-2">
+          <span class="inline-flex items-center px-2 py-0.5 rounded bg-mono-900 border border-mono-800 text-[10px] text-mono-300">
+            Deployed on Coolify
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto border-t border-mono-800/60 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-mono-400 text-[11px]">
+    <div>© {currentYear} Hilliard M. Scott. Built with Astro, Tailwind CSS v4, and Hotwire.</div>
+    <div class="flex items-center gap-4">
+      <span>Westminster, CO</span>
+      <span>•</span>
+      <span>Mono Document Design System</span>
+    </div>
+  </div>
+</footer>

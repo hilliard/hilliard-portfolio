@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@theme {
+  /* Mono Document Design System Font & Colors */
+  --font-mono: "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --color-mono-50: var(--th-mono-50);
+  --color-mono-100: var(--th-mono-100);
+  --color-mono-200: var(--th-mono-200);
+  --color-mono-300: var(--th-mono-300);
+  --color-mono-400: var(--th-mono-400);
+  --color-mono-500: var(--th-mono-500);
+  --color-mono-600: var(--th-mono-600);
+  --color-mono-700: var(--th-mono-700);
+  --color-mono-800: var(--th-mono-800);
+  --color-mono-900: var(--th-mono-900);
+  --color-mono-950: var(--th-mono-950);
+
+  /* GoldTending Brand & Accent Tokens */
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-glow: rgba(245, 158, 11, 0.15);
+
+  --color-accent: var(--th-accent, #f59e0b);
+  --color-accent-hover: var(--th-accent-hover, #fbbf24);
+}
+
+@layer base {
+  /* Dark Mode Default */
+  :root, :root[data-theme="dark"] {
+    color-scheme: dark;
+    --th-mono-50: #f8fafc;
+    --th-mono-100: #f1f5f9;
+    --th-mono-200: #e2e8f0;
+    --th-mono-300: #cbd5e1;
+    --th-mono-400: #94a3b8;
+    --th-mono-500: #64748b;
+    --th-mono-600: #475569;
+    --th-mono-700: #334155;
+    --th-mono-800: #1e293b;
+    --th-mono-900: #0f172a;
+    --th-mono-950: #020617;
+    
+    --th-surface: #090e17;
+    --th-surface-card: rgba(15, 23, 42, 0.7);
+    --th-border: rgba(255, 255, 255, 0.08);
+    --th-border-bright: rgba(255, 255, 255, 0.18);
+    --th-accent: #f59e0b;
+    --th-accent-hover: #fbbf24;
+    
+    --bg-gradient-1: rgba(245, 158, 11, 0.05);
+    --bg-gradient-2: rgba(56, 189, 248, 0.04);
+  }
+
+  /* Light Mode Inversion */
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --th-mono-50: #020617;
+    --th-mono-100: #0f172a;
+    --th-mono-200: #1e293b;
+    --th-mono-300: #334155;
+    --th-mono-400: #475569;
+    --th-mono-500: #64748b;
+    --th-mono-600: #94a3b8;
+    --th-mono-700: #cbd5e1;
+    --th-mono-800: #e2e8f0;
+    --th-mono-900: #f1f5f9;
+    --th-mono-950: #ffffff;
+    
+    --th-surface: #f8fafc;
+    --th-surface-card: rgba(255, 255, 255, 0.85);
+    --th-border: rgba(0, 0, 0, 0.08);
+    --th-border-bright: rgba(0, 0, 0, 0.16);
+    --th-accent: #d97706;
+    --th-accent-hover: #b45309;
+    
+    --bg-gradient-1: rgba(217, 119, 6, 0.05);
+    --bg-gradient-2: rgba(2, 132, 199, 0.04);
+  }
+
+  body {
+    background-color: var(--color-mono-950);
+    color: var(--color-mono-50);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* Background Atmosphere */
+.portfolio-bg {
+  background-color: var(--color-mono-950);
+  background-image: 
+    radial-gradient(circle at 15% 15%, var(--bg-gradient-1) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, var(--bg-gradient-2) 0%, transparent 45%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+  background-attachment: fixed;
+}
+
+/* Glassmorphism */
+.glass-card {
+  background: var(--th-surface-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--th-border);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--th-border-bright);
+}
+
+.glass-card-interactive:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 25px var(--color-gold-glow);
+  transform: translateY(-2px);
+}
+
+.glass-header {
+  background: rgba(var(--color-mono-950), 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--th-border);
+}
+
+/* Monospace Badges & Terminals */
+.mono-badge {
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-mono-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-mono-800);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-mono-700);
+}
+
+/* Print Stylesheet for Clean Resume Export */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+  }
+  
+  .no-print,
+  header,
+  footer,
+  #command-palette,
+  .toast-container {
+    display: none !important;
+  }
+  
+  .resume-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .glass-card {
+    background: transparent !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    page-break-inside: avoid;
+  }
+  
+  a {
+    text-decoration: none !important;
+    color: #000000 !important;
+  }
+}

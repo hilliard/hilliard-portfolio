@@ -1,0 +1,105 @@
+---
+// src/components/CertificateCard.astro
+import type { Certification } from '../data/certifications';
+
+interface Props {
+  cert: Certification;
+}
+
+const { cert } = Astro.props;
+---
+
+<div
+  data-filter-target="item"
+  data-tags={cert.tags.join(',')}
+  data-title={cert.title}
+  data-desc={cert.summary}
+  data-category={cert.category}
+  class="glass-card glass-card-interactive rounded-xl overflow-hidden flex flex-col justify-between group transition-all duration-300"
+>
+  <div>
+    <!-- Certificate Image Preview -->
+    <a href={`/certifications/${cert.slug}`} class="block relative aspect-[16/10] overflow-hidden bg-mono-900 border-b border-mono-800/80">
+      <img
+        src={cert.image}
+        alt={cert.title}
+        loading="lazy"
+        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+        onerror="this.src='/img/hilliard-logo4.png'; this.classList.add('object-contain', 'p-8');"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-mono-950/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+      
+      <!-- Top Badge -->
+      <div class="absolute top-3 left-3 flex items-center gap-2">
+        <span class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-mono-950/80 text-mono-200 border border-mono-700/80 backdrop-blur-md">
+          {cert.provider}
+        </span>
+      </div>
+
+      <!-- Category Pill -->
+      <div class="absolute top-3 right-3">
+        <span class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-accent/20 text-accent border border-accent/40 backdrop-blur-md">
+          {cert.categoryLabel}
+        </span>
+      </div>
+    </a>
+
+    <!-- Card Body -->
+    <div class="p-5">
+      <h3 class="text-base font-bold text-mono-50 font-mono tracking-tight group-hover:text-accent transition-colors line-clamp-2">
+        <a href={`/certifications/${cert.slug}`}>
+          {cert.title}
+        </a>
+      </h3>
+
+      <p class="text-xs text-mono-300 mt-2 line-clamp-3 leading-relaxed">
+        {cert.summary}
+      </p>
+
+      <!-- Key Skills Bullets / Tags -->
+      {cert.skills.length > 0 && (
+        <div class="mt-4 pt-3 border-t border-mono-800/60">
+          <div class="text-[10px] font-mono text-mono-400 uppercase tracking-wider mb-2 font-semibold">
+            Key Syllabus Topics
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            {cert.skills.slice(0, 3).map((skill) => (
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-mono-900 text-mono-300 border border-mono-800">
+                {skill}
+              </span>
+            ))}
+            {cert.skills.length > 3 && (
+              <span class="text-[11px] font-mono px-1.5 py-0.5 text-mono-400">
+                +{cert.skills.length - 3} more
+              </span>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+
+  <!-- Card Action Footer -->
+  <div class="p-5 pt-0 mt-2 flex items-center justify-between gap-3 text-xs font-mono">
+    <a
+      href={`/certifications/${cert.slug}`}
+      class="text-accent hover:text-gold-300 font-semibold flex items-center gap-1.5 group-hover:translate-x-1 transition-transform"
+    >
+      <span>Full Syllabus & Details</span>
+      <span>→</span>
+    </a>
+
+    {cert.pdf && (
+      <a
+        href={cert.pdf}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-mono-400 hover:text-mono-100 flex items-center gap-1 text-[11px] px-2 py-1 rounded bg-mono-900 border border-mono-800 hover:border-mono-700 transition-all"
+        title="View Certificate PDF"
+      >
+        <span>PDF</span>
+        <span>↗</span>
+      </a>
+    )}
+  </div>
+</div>

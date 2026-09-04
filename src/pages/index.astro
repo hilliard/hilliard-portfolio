@@ -1,0 +1,336 @@
+---
+// src/pages/index.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CertificateCard from '../components/CertificateCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { certifications } from '../data/certifications';
+import { careerItems } from '../data/career';
+import { engineeringPrinciples, bioStats } from '../data/philosophy';
+
+const featuredProjects = careerItems.filter((job) => job.featured).slice(0, 6);
+const featuredCerts = certifications.filter((cert) => cert.featured).slice(0, 6);
+---
+
+<BaseLayout
+  title="Hilliard M. Scott | Software Architect, Hardware Engineer & Founder"
+  description="Resume replacement and portfolio for Hilliard M. Scott: 30+ years bridging hardware and software, 49+ certifications, US Patent holder, aerospace power designer, startup co-founder, and hockey coach."
+>
+  <div class="space-y-24 md:space-y-32">
+    <!-- HERO SECTION -->
+    <section class="relative pt-6 md:pt-12">
+      <!-- Glow ambient backdrop -->
+      <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-gradient-to-b from-accent/15 via-sky-500/5 to-transparent rounded-full blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
+
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        <!-- Live Status Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-mono-900/90 border border-mono-700/80 shadow-lg text-xs font-mono backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-mono-200">Available for Technical Advisory & Senior Architecture</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight font-mono text-mono-50 uppercase leading-none">
+          From the Metal <br />
+          <span class="bg-gradient-to-r from-gold-400 via-amber-300 to-amber-500 bg-clip-text text-transparent">
+            to the Cloud & AI
+          </span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-base sm:text-xl text-mono-300 max-w-2xl mx-auto leading-relaxed font-sans">
+          I am <strong class="text-mono-50 font-mono">Hilliard M. Scott</strong> — a multi-disciplinary hardware engineer, software architect, US patent holder, and coach. I build resilient systems, bridge physical circuits with modern cloud architectures, and add relentless value wherever technology meets reality.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-4 font-mono text-xs sm:text-sm">
+          <a
+            href="/work"
+            class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-amber-500 text-mono-950 font-bold shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 hover:-translate-y-0.5 transition-all"
+          >
+            Explore Career History (19+)
+          </a>
+
+          <a
+            href="/certifications"
+            class="px-6 py-3.5 rounded-xl bg-mono-900 hover:bg-mono-800 text-mono-100 hover:text-mono-50 border border-mono-700 hover:border-mono-600 transition-all"
+          >
+            Browse 49+ Certifications
+          </a>
+
+          <a
+            href="/resume"
+            class="px-5 py-3.5 rounded-xl bg-mono-950/80 hover:bg-mono-900 text-mono-300 hover:text-accent border border-mono-800 transition-all flex items-center gap-2"
+          >
+            <span>📄</span>
+            <span>Resume Replacement</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- STATS TICKER METRICS -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        <div class="glass-card p-5 rounded-xl text-center">
+          <div class="text-2xl sm:text-3xl font-black font-mono text-accent">{bioStats.yearsExperience}</div>
+          <div class="text-[11px] font-mono text-mono-400 mt-1 uppercase tracking-wider">Hardware & Software</div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl text-center">
+          <div class="text-2xl sm:text-3xl font-black font-mono text-accent">{bioStats.certificationsCount}</div>
+          <div class="text-[11px] font-mono text-mono-400 mt-1 uppercase tracking-wider">Active Certifications</div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl text-center">
+          <div class="text-2xl sm:text-3xl font-black font-mono text-gold-400">1 Patent</div>
+          <div class="text-[11px] font-mono text-mono-400 mt-1 uppercase tracking-wider">United States Patent (1999)</div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl text-center">
+          <div class="text-2xl sm:text-3xl font-black font-mono text-accent">3 Startups</div>
+          <div class="text-[11px] font-mono text-mono-400 mt-1 uppercase tracking-wider">Co-Founded Ventures</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO I AM & ENGINEERING PHILOSOPHY -->
+    <section class="max-w-6xl mx-auto">
+      <div class="glass-card rounded-2xl p-6 sm:p-10 lg:p-12 border-mono-800">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <!-- Left: Narrative -->
+          <div class="lg:col-span-7 space-y-5">
+            <div class="inline-flex items-center gap-2 text-xs font-mono text-accent uppercase tracking-widest font-bold">
+              <span>●</span> WHO I AM & CORE PHILOSOPHY
+            </div>
+
+            <h2 class="text-2xl sm:text-4xl font-bold font-mono text-mono-50 tracking-tight">
+              A Multi-Disciplinary Problem Solver Located in Westminster, CO
+            </h2>
+
+            <div class="space-y-4 text-sm sm:text-base text-mono-300 leading-relaxed font-sans">
+              <p>
+                I am a person with a wide breadth of knowledge and deep experience bridging diverse technical disciplines. As a problem-solver, I dissect complex challenges, isolate root causes, and devise innovative, multi-faceted solutions.
+              </p>
+              <p>
+                My foundation as a <strong class="text-mono-100 font-semibold">Hardware Engineer</strong> gives me an innate understanding of physical circuits, semiconductors, memory hierarchies, and thermodynamics — allowing me to troubleshoot at the fundamental level.
+              </p>
+              <p>
+                Complementing this, my expertise as a <strong class="text-mono-100 font-semibold">Software Architect & Quality Specialist</strong> enables me to build high-scale cloud platforms, AI agent pipelines, and automated test harnesses that ensure robust, zero-defect value.
+              </p>
+            </div>
+
+            <div class="pt-2 flex flex-wrap gap-4 font-mono text-xs">
+              <a href="/philosophy" class="text-accent hover:text-gold-300 font-semibold flex items-center gap-1">
+                <span>Read Full Engineering Manifesto</span>
+                <span>→</span>
+              </a>
+              <span class="text-mono-600">•</span>
+              <a href="/work/datasonix" class="text-mono-300 hover:text-mono-50 flex items-center gap-1">
+                <span>View US Patent Story</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Authentic Photography -->
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="relative w-full max-w-sm rounded-2xl overflow-hidden glass-card p-2 border-mono-700/80 shadow-2xl">
+              <img
+                src="/img/Hilliard-Repelling-3rd-Flatiiron-480.jpg"
+                alt="Hilliard Rappelling 3rd Flatiron, Boulder CO"
+                class="w-full h-80 object-cover rounded-xl"
+              />
+              <div class="p-3 text-center">
+                <div class="text-xs font-mono font-bold text-mono-100">Hilliard M. Scott</div>
+                <div class="text-[11px] font-mono text-mono-400">Rappelling 3rd Flatiron, Boulder, CO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED CAREER MILESTONES -->
+    <section class="max-w-6xl mx-auto space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <div class="text-xs font-mono text-accent uppercase tracking-widest font-bold">● CAREER HIGHLIGHTS</div>
+          <h2 class="text-2xl sm:text-3xl font-bold font-mono text-mono-50 tracking-tight mt-1">
+            Featured Work & Architecture
+          </h2>
+          <p class="text-xs sm:text-sm text-mono-300 mt-1">
+            From Space Shuttle power supplies and robotic tape libraries to cloud e-commerce and modern AI.
+          </p>
+        </div>
+
+        <a
+          href="/work"
+          class="font-mono text-xs text-accent hover:text-gold-300 font-semibold flex items-center gap-1 shrink-0"
+        >
+          <span>View All 19 Milestones</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {featuredProjects.map((job) => (
+          <ProjectCard job={job} />
+        ))}
+      </div>
+    </section>
+
+    <!-- RECENT & FEATURED CERTIFICATIONS -->
+    <section class="max-w-6xl mx-auto space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <div class="text-xs font-mono text-accent uppercase tracking-widest font-bold">● CONTINUOUS LEARNING</div>
+          <h2 class="text-2xl sm:text-3xl font-bold font-mono text-mono-50 tracking-tight mt-1">
+            49+ Modern Certifications
+          </h2>
+          <p class="text-xs sm:text-sm text-mono-300 mt-1">
+            Verified mastery across Astro, TypeScript, AI Engineering, MCP, AI Agents, and Fullstack ecosystems.
+          </p>
+        </div>
+
+        <a
+          href="/certifications"
+          class="font-mono text-xs text-accent hover:text-gold-300 font-semibold flex items-center gap-1 shrink-0"
+        >
+          <span>Search All 49 Credentials</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {featuredCerts.map((cert) => (
+          <CertificateCard cert={cert} />
+        ))}
+      </div>
+    </section>
+
+    <!-- ATHLETICS, MUSIC & LIFE PASSIONS -->
+    <section class="max-w-6xl mx-auto space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <div class="text-xs font-mono text-accent uppercase tracking-widest font-bold">● PLAY & PASSIONS</div>
+        <h2 class="text-2xl sm:text-3xl font-bold font-mono text-mono-50 tracking-tight">
+          Coaching, Goaltending & Custom Bass Craft
+        </h2>
+        <p class="text-xs sm:text-sm text-mono-300">
+          The same discipline, pressure management, and craftsmanship that govern my engineering extend into athletics and music.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Coaching Card -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden bg-mono-900 relative">
+              <img
+                src="/img/girl-goalie-480.jpg"
+                alt="USA Hockey Coaching"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-3 left-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-mono-950/80 text-mono-200 border border-mono-700">
+                  USA Hockey Level 5
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold font-mono text-mono-50 group-hover:text-accent transition-colors">
+                Championship Coaching
+              </h3>
+              <p class="text-xs text-mono-300 mt-2 leading-relaxed">
+                20+ years coaching youth, high school, and collegiate hockey. Silver Stick International Champion, Bantam A State Champion, and CU Women's Team to Nationals.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="/work/hockey-coaching" class="text-xs font-mono text-accent font-semibold flex items-center gap-1">
+              <span>Read Coaching Story</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- STOPPER Card -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden bg-mono-900 relative">
+              <img
+                src="/img/hilli-goalie-480.jpg"
+                alt="Goalie STOPPER Framework"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-3 left-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-mono-950/80 text-mono-200 border border-mono-700">
+                  The Crease
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold font-mono text-mono-50 group-hover:text-accent transition-colors">
+                The STOPPER Framework
+              </h3>
+              <p class="text-xs text-mono-300 mt-2 leading-relaxed">
+                Skills, Talent, Opportunities, Physical presence, Psychological presence, Experience, and Resources. The gladiator mindset of anchoring teams under pressure.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="/work/goalie-stopper" class="text-xs font-mono text-accent font-semibold flex items-center gap-1">
+              <span>Explore STOPPER Philosophy</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Music Card -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden bg-mono-900 relative">
+              <img
+                src="/img/MeAndStevie-HotterThanJuly-480-cropped.jpg"
+                alt="Musician and Custom Bass Builder"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-3 left-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-mono-950/80 text-mono-200 border border-mono-700">
+                  Custom Bass Builder
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold font-mono text-mono-50 group-hover:text-accent transition-colors">
+                Harmonic Foundation
+              </h3>
+              <p class="text-xs text-mono-300 mt-2 leading-relaxed">
+                Dedicated bassist and craftsman who hand-built the stage bass I play. Providing the unshakeable groove and rhythmic backbone in live performances.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="/work/musician-bass" class="text-xs font-mono text-accent font-semibold flex items-center gap-1">
+              <span>View Music & Craft</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / INQUIRY CTA SECTION -->
+    <section id="contact" class="max-w-4xl mx-auto space-y-8">
+      <div class="text-center space-y-2">
+        <div class="text-xs font-mono text-accent uppercase tracking-widest font-bold">● LET'S CONNECT</div>
+        <h2 class="text-2xl sm:text-4xl font-bold font-mono text-mono-50 tracking-tight">
+          Initiate a Consultation or Advisory Discussion
+        </h2>
+        <p class="text-xs sm:text-sm text-mono-300 max-w-xl mx-auto">
+          Whether you need high-level systems architecture, AI integration strategy, hardware-software co-design, or senior engineering leadership — let's start the conversation.
+        </p>
+      </div>
+
+      <ContactForm />
+    </section>
+  </div>
+</BaseLayout>

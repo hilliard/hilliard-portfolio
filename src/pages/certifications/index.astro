@@ -1,0 +1,96 @@
+---
+// src/pages/certifications/index.astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CertificateCard from '../../components/CertificateCard.astro';
+import { certifications, certificationCategories } from '../../data/certifications';
+---
+
+<BaseLayout
+  title="49+ Professional Certifications | Hilliard M. Scott"
+  description="Explore all 49+ professional software engineering, AI, frontend, backend, and fullstack certifications achieved by Hilliard M. Scott."
+>
+  <div class="space-y-12" data-controller="filter">
+    <!-- Header -->
+    <div class="space-y-4 max-w-3xl">
+      <div class="inline-flex items-center gap-2 text-xs font-mono text-accent uppercase tracking-widest font-bold">
+        <span>●</span> CONTINUOUS TECHNICAL MASTERY
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black font-mono text-mono-50 tracking-tight">
+        49+ Professional Certifications
+      </h1>
+      <p class="text-sm sm:text-base text-mono-300 leading-relaxed font-sans">
+        A relentless commitment to mastering modern engineering paradigms — from edge-rendered Astro frameworks and TypeScript to deep neural networks, Model Context Protocol (MCP), and autonomous AI agent architectures.
+      </p>
+    </div>
+
+    <!-- Search & Filter Controls -->
+    <div class="glass-card rounded-2xl p-6 border-mono-800 space-y-5">
+      <!-- Search Bar -->
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
+        <div class="relative w-full sm:max-w-md">
+          <svg class="w-4 h-4 text-mono-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input
+            type="text"
+            data-filter-target="input"
+            data-action="input->filter#search"
+            placeholder="Search 49+ certs (e.g. MCP, AI, TypeScript, Astro, React)..."
+            class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-mono-900 border border-mono-800 text-mono-50 placeholder-mono-400 focus:outline-none focus:border-accent font-mono text-xs sm:text-sm transition-colors"
+          />
+        </div>
+
+        <div class="flex items-center justify-between w-full sm:w-auto gap-4 font-mono text-xs">
+          <span data-filter-target="counter" class="text-mono-300 font-semibold px-3 py-1 rounded bg-mono-900 border border-mono-800">
+            {certifications.length} certificates
+          </span>
+          <button
+            type="button"
+            data-action="click->filter#clearSearch"
+            class="text-mono-400 hover:text-accent transition-colors"
+          >
+            Clear Filters
+          </button>
+        </div>
+      </div>
+
+      <!-- Category Tags -->
+      <div class="flex flex-wrap gap-2 pt-2 border-t border-mono-800/60">
+        {certificationCategories.map((cat) => (
+          <button
+            type="button"
+            data-filter-target="tag"
+            data-tag={cat.id}
+            data-action="click->filter#filterByTag"
+            class={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-all cursor-pointer border ${
+              cat.id === 'all'
+                ? 'bg-accent text-mono-950 border-accent font-bold'
+                : 'bg-mono-900 text-mono-300 border-mono-800 hover:border-mono-700 hover:text-mono-100'
+            }`}
+          >
+            {cat.label}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div
+      data-filter-target="emptyState"
+      class="glass-card rounded-2xl p-12 text-center hidden space-y-3"
+    >
+      <div class="text-3xl">🔍</div>
+      <h3 class="text-base font-bold font-mono text-mono-200">No matching certifications found</h3>
+      <p class="text-xs text-mono-400 max-w-sm mx-auto">
+        Try adjusting your search query or selecting a different category filter.
+      </p>
+    </div>
+
+    <!-- Certificate Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {certifications.map((cert) => (
+        <CertificateCard cert={cert} />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

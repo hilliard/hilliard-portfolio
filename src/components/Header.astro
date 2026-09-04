@@ -1,0 +1,169 @@
+---
+// src/components/Header.astro
+const pathname = new URL(Astro.request.url).pathname;
+
+const navLinks = [
+  { href: '/work', label: 'Career & Work' },
+  { href: '/certifications', label: 'Certifications (49+)' },
+  { href: '/philosophy', label: 'Philosophy & STOPPER' },
+  { href: '/resume', label: 'Resume Replacement' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const isActive = (path: string) => {
+  if (path === '/' && pathname === '/') return true;
+  if (path !== '/' && pathname.startsWith(path)) return true;
+  return false;
+};
+---
+
+<header class="sticky top-0 z-40 w-full glass-header border-b border-mono-800/80 bg-mono-950/80 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <!-- Brand Logo -->
+    <a href="/" class="flex items-center gap-3 group shrink-0">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-gold-400 to-amber-600 p-[1px] shadow-lg shadow-gold-500/10 group-hover:shadow-gold-500/30 transition-all">
+        <div class="w-full h-full bg-mono-950 rounded-[7px] flex items-center justify-center font-mono font-black text-accent text-sm group-hover:text-gold-300">
+          HS
+        </div>
+      </div>
+      <div>
+        <div class="font-bold tracking-tight text-mono-50 font-mono text-sm group-hover:text-accent transition-colors flex items-center gap-2">
+          HILLIARD M. SCOTT
+          <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono bg-accent/15 text-accent border border-accent/30">
+            Founder
+          </span>
+        </div>
+        <div class="text-[11px] font-mono text-mono-400">
+          Software & Hardware Architect • Westminster, CO
+        </div>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden md:flex items-center gap-1 font-mono text-xs">
+      {navLinks.map((link) => {
+        const active = isActive(link.href);
+        return (
+          <a
+            href={link.href}
+            class={`px-3 py-2 rounded-lg transition-all ${
+              active
+                ? 'bg-mono-800 text-accent font-semibold border border-mono-700'
+                : 'text-mono-300 hover:text-mono-50 hover:bg-mono-900/80 border border-transparent'
+            }`}
+          >
+            {link.label}
+          </a>
+        );
+      })}
+    </nav>
+
+    <!-- Header Actions (Command Palette, Theme Toggle, Mobile Trigger) -->
+    <div class="flex items-center gap-2">
+      <!-- Command Palette Quick Trigger -->
+      <button
+        type="button"
+        onclick="document.getElementById('command-palette')?.dispatchEvent(new CustomEvent('command-palette:toggle', { bubbles: true })); const cp = document.querySelector('[data-controller=\'command-palette\']'); if (cp) { const ctrl = (window as any).Stimulus?.getControllerForElementAndIdentifier(cp, 'command-palette'); if (ctrl) ctrl.toggle(); else cp.classList.toggle('hidden'); }"
+        class="hidden sm:flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-mono-900 hover:bg-mono-800 text-mono-300 hover:text-mono-50 border border-mono-800 text-xs font-mono transition-all"
+        title="Open Command Palette (Cmd+K / Ctrl+K)"
+      >
+        <svg class="w-3.5 h-3.5 text-mono-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <span>Search</span>
+        <kbd class="bg-mono-800 text-mono-400 px-1.5 py-0.5 rounded text-[10px] border border-mono-700">⌘K</kbd>
+      </button>
+
+      <!-- Theme Switcher -->
+      <div data-controller="theme">
+        <button
+          type="button"
+          data-action="click->theme#toggle"
+          class="p-2 rounded-lg bg-mono-900 hover:bg-mono-800 text-mono-300 hover:text-accent border border-mono-800 transition-all"
+          title="Toggle Light/Dark Theme"
+          aria-label="Toggle theme"
+        >
+          <!-- Moon Icon (Visible in Dark Mode) -->
+          <svg data-theme-target="iconDark" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <!-- Sun Icon (Visible in Light Mode) -->
+          <svg data-theme-target="iconLight" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Controller & Drawer -->
+      <div data-controller="mobile-menu" class="md:hidden">
+        <button
+          type="button"
+          data-action="click->mobile-menu#toggle"
+          class="p-2 rounded-lg bg-mono-900 hover:bg-mono-800 text-mono-300 hover:text-mono-50 border border-mono-800 transition-all"
+          aria-label="Open mobile menu"
+        >
+          <!-- Hamburger -->
+          <svg data-mobile-menu-target="iconOpen" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Close X -->
+          <svg data-mobile-menu-target="iconClose" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- Backdrop -->
+        <div
+          data-mobile-menu-target="backdrop"
+          data-action="click->mobile-menu#close"
+          class="fixed inset-0 z-40 bg-mono-950/80 backdrop-blur-sm hidden"
+        ></div>
+
+        <!-- Slide Drawer -->
+        <div
+          data-mobile-menu-target="menu"
+          class="fixed inset-y-0 right-0 z-50 w-72 bg-mono-900 border-l border-mono-800 p-6 shadow-2xl flex flex-col justify-between hidden animate-slide-in"
+        >
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-mono-800">
+              <span class="font-mono font-bold text-mono-50 text-sm">Navigation</span>
+              <button
+                type="button"
+                data-action="click->mobile-menu#close"
+                class="text-mono-400 hover:text-mono-50 p-1"
+                aria-label="Close menu"
+              >
+                ✕
+              </button>
+            </div>
+            <nav class="mt-4 flex flex-col space-y-1 font-mono text-sm">
+              <a href="/" class="px-3 py-2.5 rounded-lg text-mono-200 hover:text-mono-50 hover:bg-mono-800">
+                Home
+              </a>
+              {navLinks.map((link) => (
+                <a
+                  href={link.href}
+                  class={`px-3 py-2.5 rounded-lg transition-all ${
+                    isActive(link.href)
+                      ? 'bg-mono-800 text-accent font-bold'
+                      : 'text-mono-300 hover:text-mono-50 hover:bg-mono-800'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          <div class="pt-6 border-t border-mono-800 text-xs font-mono text-mono-400">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Available for Technical Advisory</span>
+            </div>
+            <div>Hilliard M. Scott • GoldTending</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

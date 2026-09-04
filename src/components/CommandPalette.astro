@@ -1,0 +1,152 @@
+---
+// src/components/CommandPalette.astro
+import { certifications } from '../data/certifications';
+import { careerItems } from '../data/career';
+
+const quickLinks = [
+  { title: 'Home', category: 'Navigation', url: '/', keywords: 'home start top landing' },
+  { title: 'All Certifications (49+)', category: 'Navigation', url: '/certifications', keywords: 'certificates degrees scrimba uccs ai react typescript' },
+  { title: 'Career & Work Experience (19+)', category: 'Navigation', url: '/work', keywords: 'portfolio work history experience storagetek datasonix sketchup' },
+  { title: 'Engineering & STOPPER Philosophy', category: 'Navigation', url: '/philosophy', keywords: 'hardware software bridge goalie hockey music stopper' },
+  { title: 'Resume Replacement', category: 'Navigation', url: '/resume', keywords: 'cv resume print pdf export qualifications' },
+  { title: 'Contact & Inquiry', category: 'Navigation', url: '/contact', keywords: 'email message hire consult talk' },
+];
+---
+
+<div
+  id="command-palette"
+  data-controller="command-palette"
+  data-command-palette-target="modal"
+  data-action="click->command-palette#backdropClick"
+  class="fixed inset-0 z-50 bg-mono-950/80 backdrop-blur-md hidden flex items-start justify-center pt-16 sm:pt-24 px-4 overflow-y-auto"
+>
+  <div class="glass-card bg-mono-900/95 border-mono-700/80 w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden animate-slide-in">
+    <!-- Search Bar -->
+    <div class="flex items-center px-4 py-3.5 border-b border-mono-800 gap-3">
+      <svg class="w-5 h-5 text-mono-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input
+        type="text"
+        data-command-palette-target="input"
+        data-action="input->command-palette#filter"
+        placeholder="Type a command, certificate, project, or skill (e.g. MCP, AI, Storage, Resume)..."
+        class="w-full bg-transparent text-mono-50 placeholder-mono-400 text-sm md:text-base focus:outline-none font-mono"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button
+        type="button"
+        data-action="click->command-palette#close"
+        class="text-xs font-mono text-mono-400 hover:text-mono-100 bg-mono-800 px-2 py-1 rounded border border-mono-700"
+      >
+        ESC
+      </button>
+    </div>
+
+    <!-- Results List -->
+    <div
+      data-command-palette-target="list"
+      class="max-h-96 overflow-y-auto p-2 space-y-1 divide-y divide-mono-800/40"
+    >
+      <!-- Quick Navigation Items -->
+      <div class="px-3 py-1.5 text-xs font-mono font-semibold text-accent tracking-wider uppercase">
+        Quick Navigation
+      </div>
+      {quickLinks.map((item) => (
+        <a
+          href={item.url}
+          data-command-palette-target="item"
+          data-title={item.title}
+          data-category={item.category}
+          data-keywords={item.keywords}
+          class="flex items-center justify-between px-3 py-2.5 rounded-lg text-sm transition-all border border-transparent hover:bg-mono-800/80 group"
+        >
+          <div class="flex items-center gap-3">
+            <span class="p-1.5 rounded bg-mono-800 text-mono-300 group-hover:text-accent font-mono text-xs">
+              ⚡
+            </span>
+            <span class="font-medium text-mono-100 group-hover:text-mono-50">{item.title}</span>
+          </div>
+          <span class="text-xs font-mono text-mono-400 bg-mono-950/60 px-2 py-0.5 rounded border border-mono-800">
+            {item.category}
+          </span>
+        </a>
+      ))}
+
+      <!-- Certifications Index -->
+      <div class="px-3 py-1.5 text-xs font-mono font-semibold text-accent tracking-wider uppercase mt-2">
+        Certifications ({certifications.length})
+      </div>
+      {certifications.map((cert) => (
+        <a
+          href={`/certifications/${cert.slug}`}
+          data-command-palette-target="item"
+          data-title={cert.title}
+          data-category={cert.categoryLabel}
+          data-keywords={`${cert.tags.join(' ')} ${cert.provider} ${cert.skills.join(' ')}`}
+          class="flex items-center justify-between px-3 py-2.5 rounded-lg text-sm transition-all border border-transparent hover:bg-mono-800/80 group"
+        >
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="p-1.5 rounded bg-mono-800 text-mono-300 group-hover:text-accent font-mono text-xs shrink-0">
+              📜
+            </span>
+            <div class="min-w-0">
+              <div class="font-medium text-mono-100 group-hover:text-mono-50 truncate">{cert.title}</div>
+              <div class="text-xs text-mono-400 truncate">{cert.provider} • {cert.categoryLabel}</div>
+            </div>
+          </div>
+          <span class="text-xs font-mono text-mono-400 bg-mono-950/60 px-2 py-0.5 rounded border border-mono-800 shrink-0 ml-2">
+            Cert
+          </span>
+        </a>
+      ))}
+
+      <!-- Career & Projects Index -->
+      <div class="px-3 py-1.5 text-xs font-mono font-semibold text-accent tracking-wider uppercase mt-2">
+        Career & Milestones ({careerItems.length})
+      </div>
+      {careerItems.map((job) => (
+        <a
+          href={`/work/${job.slug}`}
+          data-command-palette-target="item"
+          data-title={`${job.company} ${job.role} ${job.title}`}
+          data-category={job.domainLabel}
+          data-keywords={`${job.tags.join(' ')} ${job.summary} ${job.domainLabel}`}
+          class="flex items-center justify-between px-3 py-2.5 rounded-lg text-sm transition-all border border-transparent hover:bg-mono-800/80 group"
+        >
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="p-1.5 rounded bg-mono-800 text-mono-300 group-hover:text-accent font-mono text-xs shrink-0">
+              🏢
+            </span>
+            <div class="min-w-0">
+              <div class="font-medium text-mono-100 group-hover:text-mono-50 truncate">{job.company}</div>
+              <div class="text-xs text-mono-400 truncate">{job.role}</div>
+            </div>
+          </div>
+          <span class="text-xs font-mono text-mono-400 bg-mono-950/60 px-2 py-0.5 rounded border border-mono-800 shrink-0 ml-2">
+            Work
+          </span>
+        </a>
+      ))}
+
+      <!-- Empty State -->
+      <div
+        data-command-palette-target="emptyState"
+        class="p-8 text-center hidden"
+      >
+        <p class="text-sm font-mono text-mono-400">No matching commands, certificates, or projects found.</p>
+      </div>
+    </div>
+
+    <!-- Footer Help -->
+    <div class="px-4 py-2.5 bg-mono-950/60 border-t border-mono-800 flex items-center justify-between text-xs font-mono text-mono-400">
+      <div class="flex items-center gap-3">
+        <span><kbd class="bg-mono-800 px-1.5 py-0.5 rounded border border-mono-700">↑</kbd> <kbd class="bg-mono-800 px-1.5 py-0.5 rounded border border-mono-700">↓</kbd> Navigate</span>
+        <span><kbd class="bg-mono-800 px-1.5 py-0.5 rounded border border-mono-700">↵</kbd> Select</span>
+        <span><kbd class="bg-mono-800 px-1.5 py-0.5 rounded border border-mono-700">ESC</kbd> Close</span>
+      </div>
+      <span class="text-mono-400 hidden sm:inline">Hilliard Portfolio Command Engine</span>
+    </div>
+  </div>
+</div>

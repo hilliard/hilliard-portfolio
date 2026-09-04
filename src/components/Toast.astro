@@ -1,0 +1,32 @@
+---
+// src/components/Toast.astro
+---
+
+<div
+  id="toast-notification"
+  data-controller="toast"
+  data-toast-target="container"
+  class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 pointer-events-none transition-all duration-300 ease-out max-w-sm w-full"
+>
+  <div class="glass-card bg-mono-900/95 border-mono-700/80 p-4 rounded-xl shadow-2xl flex items-start gap-3">
+    <div class="p-2 rounded-lg bg-accent/20 text-accent shrink-0">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </div>
+    <div class="flex-1 min-w-0">
+      <h4 data-toast-target="title" class="text-sm font-bold text-mono-50 tracking-tight font-mono">Notification</h4>
+      <p data-toast-target="message" class="text-xs text-mono-300 mt-0.5 leading-relaxed"></p>
+    </div>
+    <button
+      type="button"
+      data-action="toast#hide"
+      class="text-mono-400 hover:text-mono-100 transition-colors p-1 -mr-1 -mt-1 rounded"
+      aria-label="Close notification"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+</div>

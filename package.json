@@ -1,0 +1,37 @@
+{
+  "name": "hilliard-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Modern resume replacement and software engineering portfolio for Hilliard M. Scott",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 4321",
+    "start": "node dist/server/entry.mjs",
+    "build": "astro build",
+    "preview": "astro preview --host 0.0.0.0 --port 4321",
+    "astro": "astro",
+    "check": "astro check",
+    "db:migrate": "node scripts/migrate.js"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/node": "^10.1.0",
+    "@astrojs/sitemap": "^3.7.3",
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo": "^8.0.23",
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.3.1",
+    "pg": "^8.20.0",
+    "resend": "^6.12.3",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/hotwired__turbo": "^8.0.9",
+    "@types/node": "^22.13.10",
+    "@types/pg": "^8.20.0"
+  }
+}

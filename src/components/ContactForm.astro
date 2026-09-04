@@ -1,0 +1,132 @@
+---
+// src/components/ContactForm.astro
+---
+
+<div id="contact-form-frame" class="w-full">
+  <form
+    id="contact-form"
+    method="POST"
+    action="/api/contact"
+    class="glass-card rounded-2xl p-6 sm:p-8 space-y-5"
+    onsubmit="
+      event.preventDefault();
+      const form = this;
+      const btn = form.querySelector('button[type=submit]');
+      const originalText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = 'Sending message...';
+
+      const formData = new FormData(form);
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Accept': 'text/vnd.turbo-stream.html, application/json' },
+        body: formData
+      })
+      .then(async res => {
+        const ct = res.headers.get('content-type') || '';
+        if (ct.includes('turbo-stream') && window.Turbo) {
+          const html = await res.text();
+          window.Turbo.renderStreamMessage(html);
+        } else {
+          const data = await res.json();
+          if (data.success) {
+            document.getElementById('contact-form-frame').innerHTML = `
+              <div class='glass-card bg-emerald-950/40 border-emerald-500/50 p-8 rounded-2xl text-center space-y-4 animate-slide-in'>
+                <div class='w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center font-bold text-xl'>✓</div>
+                <h3 class='text-xl font-bold font-mono text-emerald-300'>Message Received!</h3>
+                <p class='text-sm text-mono-200 max-w-md mx-auto'>Thank you for reaching out! I have received your note and will reply promptly.</p>
+              </div>
+            `;
+          } else {
+            alert(data.error || 'Failed to submit form.');
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+          }
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        alert('An error occurred. Please email hilliards@gmail.com directly.');
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+      });
+    "
+  >
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <!-- Name -->
+      <div>
+        <label for="name" class="block text-xs font-mono font-semibold text-mono-300 mb-1.5">
+          Your Name <span class="text-accent">*</span>
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Jane Doe"
+          class="w-full px-4 py-2.5 rounded-lg bg-mono-900/90 border border-mono-800 text-mono-50 placeholder-mono-400 focus:outline-none focus:border-accent font-mono text-sm transition-colors"
+        />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-xs font-mono font-semibold text-mono-300 mb-1.5">
+          Email Address <span class="text-accent">*</span>
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="jane@example.com"
+          class="w-full px-4 py-2.5 rounded-lg bg-mono-900/90 border border-mono-800 text-mono-50 placeholder-mono-400 focus:outline-none focus:border-accent font-mono text-sm transition-colors"
+        />
+      </div>
+    </div>
+
+    <!-- Subject -->
+    <div>
+      <label for="subject" class="block text-xs font-mono font-semibold text-mono-300 mb-1.5">
+        Subject / Inquiry Type
+      </label>
+      <input
+        type="text"
+        id="subject"
+        name="subject"
+        placeholder="Strategic Advisory / Senior Engineering / General Inquiry"
+        class="w-full px-4 py-2.5 rounded-lg bg-mono-900/90 border border-mono-800 text-mono-50 placeholder-mono-400 focus:outline-none focus:border-accent font-mono text-sm transition-colors"
+      />
+    </div>
+
+    <!-- Message -->
+    <div>
+      <label for="message" class="block text-xs font-mono font-semibold text-mono-300 mb-1.5">
+        Message <span class="text-accent">*</span>
+      </label>
+      <textarea
+        id="message"
+        name="message"
+        required
+        rows="5"
+        placeholder="Tell me about your project, architecture challenges, team goals, or consultation inquiries..."
+        class="w-full px-4 py-3 rounded-lg bg-mono-900/90 border border-mono-800 text-mono-50 placeholder-mono-400 focus:outline-none focus:border-accent font-mono text-sm transition-colors leading-relaxed"
+      ></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="flex items-center justify-between pt-2">
+      <div class="text-[11px] font-mono text-mono-400 flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Replies sent within 24 hours</span>
+      </div>
+
+      <button
+        type="submit"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-gold-500 to-amber-600 hover:from-gold-400 hover:to-amber-500 text-mono-950 font-bold font-mono text-sm shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 hover:-translate-y-0.5 transition-all cursor-pointer"
+      >
+        <span>Send Message</span>
+        <span>→</span>
+      </button>
+    </div>
+  </form>
+</div>
